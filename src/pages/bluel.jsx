@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "@components/button.jsx";
+import Button from "@components/button-primary.jsx";
 import logoGitHub from "@images/logoGitHub.png";
 import "./pages.scss";
 import "./bluel.scss";

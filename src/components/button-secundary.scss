@@ -1,0 +1,26 @@
+@use "@styles/variable.scss" as *;
+
+
+
+.button-secondary {
+  padding: 0.75rem 2rem;
+  border: 1px solid $border-color;
+  border-radius: 0.5rem;
+  background-color: transparent; 
+  color: $text-colorS;           
+  cursor: pointer;
+  transition: border-colorS 0.2s ease-in-out; // Effet fluide au survol
+
+  &:hover {
+    border-color: $border-colorS-hover;
+    background-color: #f1f5f9; 
+  }
+
+  
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #cbd5e1;     
+    color: #94a3b8;            
+  }
+}

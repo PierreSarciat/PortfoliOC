@@ -7,7 +7,7 @@ import carducciImg from '@images/carducci.webp';
 import grimoireImg from '@images/grimoire.webp';
 import kasaImg from '@images/kasa.webp';
 import menu_makerImg from '@images/menu_maker.webp';
-import Button from "@components/button.jsx";
+import Button from "@components/button-primary.jsx";
 import imageFond from "@images/imageFond.webp"
 
 const projects = [

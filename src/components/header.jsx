@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './header.scss'
+import './header.scss';
+import '../App.scss';
 import { NavLink, useLocation } from "react-router-dom";
 
 
@@ -46,7 +47,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink to="/#competence">
-                  Compétence
+                  Compétences
                 </NavLink>
               </li>
               <li>

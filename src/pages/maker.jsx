@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "@components/button.jsx";
+import Button from "@components/button-primary.jsx";
 import "./pages.scss";
 import "./maker.scss";
 import logokanban from "@images/logokanban.jpg";
