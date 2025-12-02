@@ -1,0 +1,12 @@
+.buttonBooki {
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+#booki {
+    grid-template-columns: 1fr 4fr 1fr;
+    
+}

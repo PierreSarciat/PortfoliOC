@@ -1,0 +1,172 @@
+@use "@styles/variable.scss" as *;
+
+.homeContent {
+  font-size: 17px;
+  line-height: 1.6;
+  color: black;
+
+  .title {
+    display: flex;
+    gap: 1rem;
+    color: #bad3df;
+  }
+
+  .highlight {
+    color: rgba(236, 237, 243, 0.54);
+    font-weight: 900;
+  }
+
+  .presentation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 100px;
+  }
+
+
+  .buttonHome {
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+
+  }
+
+  #CV{
+    background-color: transparent;
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.skillsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+
+  .skills {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 10px;
+
+    .skillsList {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #3191c0;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+
+    }
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectList {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .textMe {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    ;
+  }
+
+  .text {
+    padding: 20px;
+    border: 1px solid #85cdf187;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+  }
+
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+
+  .skillsContent .skills {
+    grid-template-columns: 1fr;
+    /* une seule colonne */
+    gap: 16px;
+
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .homeContent .title {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .projectList {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .homeContent {
+    font-size: 15px;
+  }
+
+  
+  .buttonHome {
+    flex-direction: column;
+  }
+
+  .aboutMe .textMe, .about{
+    grid-template-columns: 1fr;
+  }
+}

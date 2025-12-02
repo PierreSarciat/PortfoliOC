@@ -1,0 +1,32 @@
+@use "../styles/variable.scss" as *;
+
+.footer {
+  margin-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: black;
+    width: 100vw;
+    box-sizing: border-box;
+    margin-left: calc(50% - 50vw);
+
+    p {
+        color: $titlecolor ;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+  
+  .footer p {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+  }
+
+}

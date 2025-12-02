@@ -1,0 +1,24 @@
+@use "@styles/variable.scss" as *;
+
+.button {
+    display: flex;
+    padding: 10px 30px;
+    border: 1px solid $maincolor;
+    border-radius: 50px;
+    background-color: $maincolor;
+    color: $titlecolor;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    align-items: center;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    .button-img {
+        width: 30px;
+        height: 30px;
+    }
+
+}

@@ -1,0 +1,44 @@
+.buttonBluel {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.mockupProject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    gap: 2rem; 
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px; 
+    width: 100%;
+
+    p {
+      margin: 0; 
+    }
+  }
+}
