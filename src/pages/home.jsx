@@ -24,18 +24,15 @@ const Home = () => {
     return (
 
         <div className='homeContent'>
-            <section className="presentation" id="presentation" style={{
-                backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${imageFond})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}>
 
-                <h1 className="title"><div className='p'>Pierre-Henri Sarciat </div><div className='q'><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </div></h1>
-                <div className='buttonHome'>
-                    <Button text="Me contacter" href="#contact" />
-                    < Button id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.html`} target="_blank" rel="noopener noreferrer" />
-                </div>
-            </section>
+
+            <h1 className="title">Pierre-Henri Sarciat</h1>
+            <p><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </p >
+            <div className='buttonHome'>
+                <Button text="Me contacter" href="#contact" />
+                < Button id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.html`} target="_blank" rel="noopener noreferrer" />
+            </div>
+
             <section className='about'>
                 <p></p>
                 <p>Développeur Full-Stack, je crée des interfaces performantes avec React et Sass, et développe des API fiables avec Node.js, Express et MongoDB.<br /><br /> Mon objectif est de livrer des applications complètes, optimisées et accessibles, offrant une expérience utilisateur fluide sur tous les supports.</p>
@@ -95,7 +92,7 @@ const Home = () => {
                 </div>
 
             </section>
-        </div>
+        </div >
     );
 };
 export default Home;
