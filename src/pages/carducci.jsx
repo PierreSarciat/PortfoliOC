@@ -2,8 +2,8 @@ import React from 'react';
 import Button from "@components/button-primary.jsx";
 import "./pages.scss";
 import "./carducci.scss";
-import logoGitHub from "@images/logoGitHub.png";
-import logolighthouse from "@images/logolighthouse.png";
+/*import logoGitHub from "@images/logoGitHub.png";
+import logolighthouse from "@images/logolighthouse.png";*/
 
 
 const Booki = () => {

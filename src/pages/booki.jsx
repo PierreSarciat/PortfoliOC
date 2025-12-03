@@ -2,9 +2,9 @@ import React from 'react';
 import Button from "@components/button-primary.jsx";
 import "./pages.scss";
 import "./booki.scss";
-import logoGitHub from "@images/logoGitHub.png";
+/*import logoGitHub from "@images/logoGitHub.png";
 import logohtml from "@images/logohtml.png";
-import logocss from "@images/logocss.png";
+import logocss from "@images/logocss.png";*/
 
 
 const Booki = () => {

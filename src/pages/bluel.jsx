@@ -1,12 +1,12 @@
 import React from 'react';
 import Button from "@components/button-primary.jsx";
-import logoGitHub from "@images/logoGitHub.png";
+/*import logoGitHub from "@images/logoGitHub.png";*/
 import "./pages.scss";
 import "./bluel.scss";
-import logohtml from "@images/logohtml.png";
+/*import logohtml from "@images/logohtml.png";
 import logocss from "@images/logocss.png";
 import logoJS from "@images/logoJS.png";
-import logomongodb from "@images/logomongodb.png";
+import logomongodb from "@images/logomongodb.png";*/
 
 
 const Bluel = () => {

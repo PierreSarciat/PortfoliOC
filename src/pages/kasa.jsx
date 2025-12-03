@@ -2,11 +2,11 @@ import React from 'react';
 import Button from "@components/button-primary.jsx";
 import "./pages.scss";
 import "./kasa.scss"
-import logoGitHub from "@images/logoGitHub.png";
+/*import logoGitHub from "@images/logoGitHub.png";
 import logohtml from "@images/logohtml.png";
 import logocss from "@images/logocss.png";
 import logoreact from "@images/logoreact.png";
-import logoJS from "@images/logoJS.png";
+import logoJS from "@images/logoJS.png";*/
 
 
 const Kasa = () => {
@@ -81,9 +81,7 @@ const Kasa = () => {
                     </ul>
                 </div>
             </section>
-            <div className='buttonKasa'>
-                <Button img={logoGitHub} alt="GitHub" href="https://github.com/PierreSarciat/Kasa-immobilier.git" target="_blank" rel="noopener noreferrer" />
-            </div>
+
         </div>
     );
 };

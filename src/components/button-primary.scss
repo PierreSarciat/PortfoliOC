@@ -1,6 +1,6 @@
 @use "@styles/variable.scss" as *;
 
-.button {
+.buttonP {
     display: flex;
     padding: 0.75rem 2rem;
     border: none;
@@ -18,7 +18,7 @@
         background-color: $primary-colorP-hover;
     }
 
-    .button-img {
+    .buttonP-img {
         width: 30px;
         height: 30px;
     }

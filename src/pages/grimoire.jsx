@@ -2,10 +2,10 @@ import React from 'react';
 import Button from "@components/button-primary.jsx";
 import "./pages.scss";
 import "./grimoire.scss"
-import logoGitHub from "@images/logoGitHub.png";
+/*import logoGitHub from "@images/logoGitHub.png";
 import logoreact from "@images/logoreact.png";
 import logoJS from "@images/logoJS.png";
-import logomongodb from "@images/logomongodb.png";
+import logomongodb from "@images/logomongodb.png";*/
 
 const Grimoire = () => {
     return (

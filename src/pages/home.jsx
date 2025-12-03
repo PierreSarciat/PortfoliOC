@@ -7,8 +7,10 @@ import carducciImg from '@images/carducci.webp';
 import grimoireImg from '@images/grimoire.webp';
 import kasaImg from '@images/kasa.webp';
 import menu_makerImg from '@images/menu_maker.webp';
-import Button from "@components/button-primary.jsx";
-import imageFond from "@images/imageFond.webp"
+import ButtonP from "@components/button-primary.jsx";
+import ButtonS from "@components/button-secondary.jsx";
+import logoGit from "@logo/logoGitHub.png"
+import logoLDN from "@logo/logoLDN.png"
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki" },
@@ -28,16 +30,23 @@ const Home = () => {
 
             <h1 className="title">Pierre-Henri Sarciat</h1>
             <p><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </p >
-            <div className='buttonHome'>
-                <Button text="Me contacter" href="#contact" />
-                < Button id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.html`} target="_blank" rel="noopener noreferrer" />
-            </div>
-
             <section className='about'>
                 <p></p>
-                <p>Développeur Full-Stack, je crée des interfaces performantes avec React et Sass, et développe des API fiables avec Node.js, Express et MongoDB.<br /><br /> Mon objectif est de livrer des applications complètes, optimisées et accessibles, offrant une expérience utilisateur fluide sur tous les supports.</p>
+                <p>Développeur Full-Stack, je crée des interfaces performantes avec React et Sass, et développe des API fiables avec Node.js, Express et MongoDB.</p>
                 <p></p>
             </section>
+            <div className='buttonHome'>
+                <ButtonP text="Me contacter" href="#contact" />
+                <ButtonS text="Voir mes projets" href="" target="_blank" rel="noopener noreferrer" />
+            </div>
+            <div className='logo'>
+
+                <a href="https://github.com/PierreSarciat/" target="_blank" rel="noopener noreferrer" > <img src={logoGit} alt="GitHub" /> </a>
+                <a href="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer" > <img src={logoLDN} alt="logo linkdin" /> </a>
+
+
+            </div>
+
             <section className='skillsContent' id="competences">
                 <h2>Mes compétences</h2>
                 <section className='skills'>
@@ -85,9 +94,9 @@ const Home = () => {
                 <h2>A propos</h2>
                 <div className='textMe'>
                     <p></p>
-                    <p className='text'>Issu du domaine paramédical, j’ai toujours travaillé dans des environnements où l’écoute, la rigueur et l’adaptabilité sont essentielles.<br /> En pleine réflexion sur mon avenir professionnel, j’ai ressenti le besoin d’entamer une reconversion vers un métier qui allie créativité, logique et construction.<br />
+                    <p className='text'> Mon objectif est de livrer des applications complètes, optimisées et accessibles, offrant une expérience utilisateur fluide sur tous les supports. Issu du domaine paramédical, j’ai toujours travaillé dans des environnements où l’écoute, la rigueur et l’adaptabilité sont essentielles.<br /> En pleine réflexion sur mon avenir professionnel, j’ai ressenti le besoin d’entamer une reconversion vers un métier qui allie créativité, logique et construction.<br />
                         C’est au cours de mes recherches que j’ai découvert la formation OpenClassrooms, et j’ai réalisé que le développement web réunissait exactement ce que je recherchais : un secteur dynamique, des projets concrets, la possibilité d’apprendre en continu et surtout la satisfaction de créer des solutions utiles.<br />
-                        Cette transition me permet aujourd’hui de mettre à profit ma méthodologie, ma capacité à résoudre des problèmes et ma volonté d’aider, tout en développant de nouvelles compétences techniques.<br /></p>
+                        Cette transition me permet aujourd’hui de mettre à profit ma méthodologie, ma capacité à résoudre des problèmes et ma volonté d’aider, tout en développant de nouvelles compétences techniques.</p>
                     <p></p>
                 </div>
 

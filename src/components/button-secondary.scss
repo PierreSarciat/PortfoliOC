@@ -1,0 +1,27 @@
+@use "@styles/variable.scss" as *;
+
+
+
+.buttonS {
+  padding: 0.75rem 2rem;
+  border: 1px solid $border-colorS;
+  border-radius: 0.5rem;
+  background-color: transparent; 
+  color: black;           
+  cursor: pointer;
+  transition: border-colorS 0.2s ease-in-out; 
+  text-decoration: none;
+
+  &:hover {
+    border-color: $border-colorS-hover;
+    background-color: #f1f5f9; 
+  }
+
+  
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #cbd5e1;     
+    color: #94a3b8;            
+  }
+}
