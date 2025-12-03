@@ -80,14 +80,15 @@
 }
 
 .logo {
-    display: flex;
-    gap: 3em;
+  display: flex;
+  gap: 3em; 
 
-    .logo img {
-        width: 60px;
-
-    }
+  img {
+    width: 60px; 
+    height: auto; 
+  }
 }
+
 
 
 @media (max-width: 800px) {

@@ -11,6 +11,7 @@ import ButtonP from "@components/button-primary.jsx";
 import ButtonS from "@components/button-secondary.jsx";
 import logoGit from "@logo/logoGitHub.png"
 import logoLDN from "@logo/logoLDN.png"
+import SkillCard from '@components/SkillCard';
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki" },
@@ -19,6 +20,38 @@ const projects = [
     { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", link: "/grimoire" },
     { img: kasaImg, title: "KASA", alt: "Projet Kasa", link: "/kasa" },
     { img: menu_makerImg, title: "MENU MAKER", alt: "Projet Menu Maker", link: "/maker" },
+];
+
+const skills = [
+    {
+        img: "",
+        title: "Front End",
+        description: [
+            { category: "Langage", items: ["JavaScript", "HTML5", "SCSS"] },
+            { category: "Frameworks et bibliothèques", items: ["React", "React Router", "Vite"] }
+        ],
+        alt: "Logo Front End"
+    },
+    {
+        img: "",
+        title: "Back End",
+        description: [
+            { category: "Langages et Frameworks", items: ["Node.js", "Express.js"] },
+            { category: "Base de Données", items: ["MongoDB"] },
+            { category: "API", items: ["API REST"] }
+        ],
+        alt: "Logo Back End"
+    },
+    {
+        img: "",
+        title: "Outils et Tests",
+        description: [
+            { category: "Gestion de Version", items: ["Git", "GitHub"] },
+            { category: "Environnement", items: ["Visual Studio", "Postman"] },
+            { category: "SEO", items: ["Google Search Console", "PageSpeed Insights", "Lighthouse"] }
+        ],
+        alt: "Logo Outils"
+    }
 ];
 
 
@@ -47,33 +80,19 @@ const Home = () => {
 
             </div>
 
-            <section className='skillsContent' id="competences">
-                <h2>Mes compétences</h2>
-                <section className='skills'>
-                    <div className='skillsList'>
-                        <h3>Front End</h3>
-                        <ul>
-                            <li><strong>Langage: </strong>JavaScript, HTML5, CSS</li>
-                            <li><strong>Frameworks et bibliothèques: </strong>React, React Router, Vite</li>
-                        </ul>
-                    </div>
-                    <div className='skillsList'>
-                        <h3>Back End</h3>
-                        <ul>
-                            <li><strong>Langages et Frameworks: </strong>Node.js, Express.js</li>
-                            <li><strong>Base de Données </strong>MongoDB</li>
-                            <li><strong>API </strong>API REST</li>
-                        </ul>
-                    </div>
-                    <div className='skillsList'>
-                        <h3>Outils et Tests</h3>
-                        <ul>
-                            <li><strong>Gestion de Version: </strong>Git, GitHub</li>
-                            <li><strong>Environnement: </strong>Visual Studio, Postman</li>
-                            <li><strong>SEO: </strong>Google Search Console, PageSpeed Insights, Lighthouse</li>
-                        </ul>
-                    </div>
-                </section>
+            <section className="skillsContent bg-slate-50 py-24" id="competences">
+                <h2 className="text-center text-3xl font-bold mb-12">Mes compétences</h2>
+                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                    {skills.map((skill, index) => (
+                        <SkillCard
+                            key={index}
+                            img={skill.img}
+                            title={skill.title}
+                            description={skill.description}
+                            alt={skill.alt}
+                        />
+                    ))}
+                </div>
             </section>
             <section className='project' id="portfolio">
                 <h2>Mes Projets</h2>
