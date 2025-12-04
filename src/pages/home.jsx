@@ -80,9 +80,9 @@ const Home = () => {
 
             </div>
 
-            <section className="skillsContent bg-slate-50 py-24" id="competences">
-                <h2 className="text-center text-3xl font-bold mb-12">Mes compétences</h2>
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+            <section className="skillsContent" id="competences">
+                <h2 className="skills-content_title">Mes compétences</h2>
+                <div className="skills-grid">
                     {skills.map((skill, index) => (
                         <SkillCard
                             key={index}

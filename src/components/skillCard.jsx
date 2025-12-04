@@ -2,26 +2,20 @@ import React from "react";
 import './skillCard.scss';
 
 
-
 const SkillCard = ({ img, title, description, alt }) => {
     return (
-        <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center text-center">
-            {/* Image du logo */}
+        <div className="skill-card">
             <img
                 src={img}
                 alt={alt}
-                className="w-20 h-20 object-contain mb-4"
+                className="skill-card__image"
             />
-
-            {/* Titre */}
-            <h3 className="text-xl font-bold mb-4">{title}</h3>
-
-            {/* Liste des compétences */}
-            <ul className="space-y-2 w-full text-left">
+            <h3 className="skill-card__title">{title}</h3>
+            <ul className="skill-card__list"> {/* Classe pour la liste */}
                 {description.map((skill, index) => (
-                    <li key={index}>
-                        <strong>{skill.category}: </strong>
-                        {skill.items.join(', ')}
+                    <li key={index} className="skill-card__item"> {/* Classe pour chaque élément de la liste */}
+                        <strong className="skill-card__category">{skill.category}: </strong>
+                        <span className="skill-card__items">{skill.items.join(', ')}</span>
                     </li>
                 ))}
             </ul>

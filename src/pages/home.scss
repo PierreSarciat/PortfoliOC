@@ -118,6 +118,34 @@
 
 }
 
+// Section "Compétences"
+#competences {
+  background-color: #f8fafc; 
+  padding-top: 6rem; 
+  padding-bottom: 6rem; 
+
+  .skills-content__title {
+    text-align: center; 
+    font-size: 1.875rem; 
+    font-weight: 700; 
+    margin-bottom: 3rem; 
+  }
+
+  .skills-grid {
+    max-width: 72rem; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+
+    @media (min-width: 768px) { 
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
 
 
 @media (max-width: 1000px) {

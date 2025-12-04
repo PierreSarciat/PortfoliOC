@@ -1,0 +1,54 @@
+// Styles pour SkillCard
+.skill-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  &__image {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    margin: 0 auto 1rem; // Centrer l'image et ajouter une marge basse
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__list {
+    width: 100%;
+    list-style: none; // Supprime les puces par défaut
+    padding: 0; // Supprime le padding par défaut de la liste
+    margin: 0; // Supprime la marge par défaut de la liste
+  }
+
+  &__item {
+    margin-bottom: 0.75rem; // Espacement entre les éléments de la liste
+    padding-bottom: 0.75rem; // Padding en bas pour chaque élément
+    border-bottom: 1px solid #e2e8f0; // Ligne de séparation légère
+    display: flex; // Utilisation de flexbox pour aligner les éléments
+    flex-wrap: wrap; // Permet le retour à la ligne si nécessaire
+  }
+
+  &__category {
+    font-weight: 600; // Gras pour la catégorie
+    color: #4a5568; // Couleur gris foncé pour la catégorie
+    margin-right: 0.5rem; // Espacement à droite de la catégorie
+    flex-shrink: 0; // Empêche le texte de rétrécir
+  }
+
+  &__items {
+    color: #718096; // Couleur gris pour les éléments de la liste
+    flex-grow: 1; // Permet aux éléments de prendre l'espace disponible
+  }
+}
