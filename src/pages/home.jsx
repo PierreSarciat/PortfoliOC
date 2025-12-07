@@ -12,43 +12,47 @@ import ButtonS from "@components/button-secondary.jsx";
 import logoGit from "@logo/logoGitHub.png"
 import logoLDN from "@logo/logoLDN.png"
 import SkillCard from '@components/SkillCard';
+import logoHTML5 from "@logo/logoHTML5.png";
+import logoBackend from "@logo/logoBackend.png";
+import logoOutils from "@logo/logoOutils.png"
+
 
 const projects = [
-    { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki" },
-    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", link: "/bluel" },
-    { img: carducciImg, title: "NINA CARDUCCI", alt: "Projet Nina Carducci", link: "/carducci" },
-    { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", link: "/grimoire" },
-    { img: kasaImg, title: "KASA", alt: "Projet Kasa", link: "/kasa" },
-    { img: menu_makerImg, title: "MENU MAKER", alt: "Projet Menu Maker", link: "/maker" },
+    { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki", description: "Création de  la page d'accueil d'une agence de voyage" },
+    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", link: "/bluel" },
+    { img: carducciImg, title: "NINA CARDUCCI", alt: "Projet Nina Carducci", description: "Optimiser le référencement d’un site, améliorer sa performance et son accessibilité.", link: "/carducci" },
+    { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d' un site de notation de livres", link: "/grimoire" },
+    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router ", link: "/kasa" },
+    { img: menu_makerImg, title: "MENU MAKER", alt: "Projet Menu Maker", description: "Plannifier le développement du site d' un client", link: "/maker" },
 ];
 
 const skills = [
     {
-        img: "",
+        img: logoHTML5,
         title: "Front End",
         description: [
-            { category: "Langage", items: ["JavaScript", "HTML5", "SCSS"] },
-            { category: "Frameworks et bibliothèques", items: ["React", "React Router", "Vite"] }
+            { items: ["JavaScript", "HTML5/SCSS"] },
+            { items: ["React/Vite"] }
         ],
         alt: "Logo Front End"
     },
     {
-        img: "",
+        img: logoBackend,
         title: "Back End",
         description: [
-            { category: "Langages et Frameworks", items: ["Node.js", "Express.js"] },
-            { category: "Base de Données", items: ["MongoDB"] },
-            { category: "API", items: ["API REST"] }
+            { items: ["Node.js", "Express.js"] },
+            { items: ["MongoDB"] },
+            { items: ["API REST"] }
         ],
         alt: "Logo Back End"
     },
     {
-        img: "",
+        img: logoOutils,
         title: "Outils et Tests",
         description: [
-            { category: "Gestion de Version", items: ["Git", "GitHub"] },
-            { category: "Environnement", items: ["Visual Studio", "Postman"] },
-            { category: "SEO", items: ["Google Search Console", "PageSpeed Insights", "Lighthouse"] }
+            { items: ["Git/GitHub"] },
+            { items: ["Visual Studio"] },
+            { items: ["SEO"] }
         ],
         alt: "Logo Outils"
     }
@@ -96,6 +100,7 @@ const Home = () => {
             </section>
             <section className='project' id="portfolio">
                 <h2>Mes Projets</h2>
+                <p>Découvrez une sélection de mes réalisations récentes</p>
                 <div className='projectList'>
 
                     {projects.map((proj, index) => (
@@ -105,6 +110,7 @@ const Home = () => {
                             title={proj.title}
                             alt={proj.alt}
                             link={proj.link}
+                            description={proj.description}
                         />
                     ))}
                 </div>

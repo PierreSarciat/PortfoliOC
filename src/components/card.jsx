@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Card = ({ img, title, link, alt }) => {
+const Card = ({ img, title, link, alt, description }) => {
 
     const navigate = useNavigate();
 
@@ -18,12 +18,15 @@ const Card = ({ img, title, link, alt }) => {
     return (
         <a href={link} onClick={handleClick} className="card-link">
             <div className="card">
-                <img src={img} alt={alt} />
-                <div className="card-overlay">
-                    <div className="card-text">
-                        <h3>{title}</h3>
+                <div className="card-image">
+                    <img src={img} alt={alt} />
+                    <div className="card-overlay">
+                        <div className="card-text">
+                            <h3>{title}</h3>
+                        </div>
                     </div>
                 </div>
+                <p>{description}</p>
             </div>
         </a>
     );

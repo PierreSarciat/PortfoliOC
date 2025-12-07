@@ -1,7 +1,6 @@
 import React from "react";
 import './skillCard.scss';
 
-
 const SkillCard = ({ img, title, description, alt }) => {
     return (
         <div className="skill-card">
@@ -11,14 +10,17 @@ const SkillCard = ({ img, title, description, alt }) => {
                 className="skill-card__image"
             />
             <h3 className="skill-card__title">{title}</h3>
-            <ul className="skill-card__list"> {/* Classe pour la liste */}
+            <div className="skill-card__content">
                 {description.map((skill, index) => (
-                    <li key={index} className="skill-card__item"> {/* Classe pour chaque élément de la liste */}
-                        <strong className="skill-card__category">{skill.category}: </strong>
-                        <span className="skill-card__items">{skill.items.join(', ')}</span>
-                    </li>
+                    <ul className="skill-card__items-list">
+                        {skill.items.map((item, itemIndex) => (
+                            <li key={itemIndex} className="skill-card__item">
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

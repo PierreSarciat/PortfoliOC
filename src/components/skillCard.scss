@@ -1,4 +1,5 @@
-// Styles pour SkillCard
+@use "@styles/variable.scss" as *;
+
 .skill-card {
   background-color: #ffffff;
   padding: 1.5rem;
@@ -14,7 +15,7 @@
     width: 5rem;
     height: 5rem;
     object-fit: contain;
-    margin: 0 auto 1rem; // Centrer l'image et ajouter une marge basse
+    margin: 0 auto 1rem;
     display: block;
   }
 
@@ -23,32 +24,22 @@
     font-weight: 700;
     margin-bottom: 1rem;
     text-align: center;
+    color: $titlecolor;
   }
 
-  &__list {
-    width: 100%;
-    list-style: none; // Supprime les puces par défaut
-    padding: 0; // Supprime le padding par défaut de la liste
-    margin: 0; // Supprime la marge par défaut de la liste
+  &__items-list {
+    list-style-type: disc; // Liste à puces
+    list-style-position: inside; // Position des puces
+    padding-left: 1rem; // Retrait pour les puces
+    margin: 0;
   }
+
+   li::marker {
+      color: $titlecolor; // Couleur bleue pour les puces (ex: bleu-500)
+      font-size: 1.2em; // Taille des puces (optionnel)
+    }
 
   &__item {
-    margin-bottom: 0.75rem; // Espacement entre les éléments de la liste
-    padding-bottom: 0.75rem; // Padding en bas pour chaque élément
-    border-bottom: 1px solid #e2e8f0; // Ligne de séparation légère
-    display: flex; // Utilisation de flexbox pour aligner les éléments
-    flex-wrap: wrap; // Permet le retour à la ligne si nécessaire
-  }
-
-  &__category {
-    font-weight: 600; // Gras pour la catégorie
-    color: #4a5568; // Couleur gris foncé pour la catégorie
-    margin-right: 0.5rem; // Espacement à droite de la catégorie
-    flex-shrink: 0; // Empêche le texte de rétrécir
-  }
-
-  &__items {
-    color: #718096; // Couleur gris pour les éléments de la liste
-    flex-grow: 1; // Permet aux éléments de prendre l'espace disponible
+    margin-bottom: 0.25rem;
   }
 }
