@@ -1,3 +1,5 @@
+@use "../styles/variable.scss" as *;
+
 .titleProject {
     display: flex;
     flex-direction: column;
@@ -11,10 +13,11 @@
         font-family: Oswald;
     }
 
+   
+
     p {
         font-size: 20px;
-
-
+       
     }
 }
 
@@ -80,13 +83,13 @@
 }
 
 .logo {
-  display: flex;
-  gap: 3em; 
+    display: flex;
+    gap: 3em;
 
-  img {
-    width: 60px; 
-    height: auto; 
-  }
+    img {
+        width: 60px;
+        height: auto;
+    }
 }
 
 

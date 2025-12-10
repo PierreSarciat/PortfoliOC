@@ -3,12 +3,11 @@ import "./home.scss";
 import Card from '@components/card.jsx';
 import bookiImg from '@images/booki.webp';
 import bluelImg from '@images/bluel.webp';
-import carducciImg from '@images/carducci.webp';
 import grimoireImg from '@images/grimoire.webp';
 import kasaImg from '@images/kasa.webp';
-import menu_makerImg from '@images/menu_maker.webp';
 import ButtonP from "@components/button-primary.jsx";
 import ButtonS from "@components/button-secondary.jsx";
+import ButtonT from '../components/button-tag';
 import logoGit from "@logo/logoGitHub.png"
 import logoLDN from "@logo/logoLDN.png"
 import SkillCard from '@components/SkillCard';
@@ -18,13 +17,12 @@ import logoOutils from "@logo/logoOutils.png"
 
 
 const projects = [
-    { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki", description: "Création de  la page d'accueil d'une agence de voyage" },
-    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", link: "/bluel" },
-    { img: carducciImg, title: "NINA CARDUCCI", alt: "Projet Nina Carducci", description: "Optimiser le référencement d’un site, améliorer sa performance et son accessibilité.", link: "/carducci" },
-    { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d' un site de notation de livres", link: "/grimoire" },
-    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router ", link: "/kasa" },
-    { img: menu_makerImg, title: "MENU MAKER", alt: "Projet Menu Maker", description: "Plannifier le développement du site d' un client", link: "/maker" },
+    { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki", description: "Création de la page d'accueil d'une agence de voyage", tag_text: ["HTML", "CSS"] },
+    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", link: "/bluel", tag_text: "JavaScript" },
+    { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d'un site de notation de livres", link: "/grimoire", tag_text: ["Node.js", "MongoDB"] },
+    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", link: "/kasa", tag_text: "React" },
 ];
+
 
 const skills = [
     {
@@ -111,6 +109,7 @@ const Home = () => {
                             alt={proj.alt}
                             link={proj.link}
                             description={proj.description}
+                            tag_text={proj.tag_text}
                         />
                     ))}
                 </div>
