@@ -31,7 +31,9 @@ const Card = ({ img, title, link, alt, description, tag_text }) => {
                             <ButtonT key={index} tag_text={tag} />
                         ))
                     ) : (
+
                         <ButtonT tag_text={tag_text} />
+
                     )}
                 </div>
             </div>

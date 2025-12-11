@@ -24,9 +24,23 @@
       border-radius: 30px;
       object-fit: cover;
       object-position: top;
+      display: block;
     }
   }
 
+// Titre superposé à l'image
+  &__title {
+    position: absolute; // Position absolue pour la superposition
+    bottom: 0; // Positionné en bas de l'image
+    left: 0;
+    right: 0;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 2; // Au-dessus de l'overlay
+  }
 
 
   // Overlay UNIQUEMENT sur l'image
@@ -40,6 +54,7 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 15px;
+    z-index: 1;
   }
 
   // Afficher l'overlay au survol de l'image
@@ -56,3 +71,11 @@
     text-align: center;
   }
 }
+
+.buttonTag{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 20px;
+}
+

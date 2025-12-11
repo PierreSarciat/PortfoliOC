@@ -1,14 +1,11 @@
 @use "@styles/variable.scss" as *;
 
 .buttonT {
-    display: flex;
-    padding: 0.75rem 2rem;
+    padding: 0.3rem;
     border: none;
     border-radius: 0.5rem;
     background-color: $background-colorT;
     color: $colorT;
     text-decoration: none;
-    font-weight: bold;
-    align-items: center;
 
 }
