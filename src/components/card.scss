@@ -1,10 +1,30 @@
+@use "@styles/variable.scss" as *;
+
 .card {
   background-color: white;
+  position: relative;
   border-radius: 20px;
   padding: 5px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; // Transition pour le déplacement
   height: 400px;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    color: $text-colorP;
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 550;
+    text-align: center;
+    z-index: 2;
+    opacity: 0; // Masqué par défaut
+    transition: opacity 0.3s ease; // Animation fluide
+  }
 
   &:hover {
     transform: translateY(-5px); // Déplacement au survol
@@ -28,19 +48,31 @@
     }
   }
 
-// Titre superposé à l'image
-  &__title {
-    position: absolute; // Position absolue pour la superposition
-    bottom: 0; // Positionné en bas de l'image
-    left: 0;
-    right: 0;
-    color: white;
-    padding: 10px;
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: center;
-    z-index: 2; // Au-dessus de l'overlay
+  .logoCard {
+    display: flex;
+    gap: 20px;
+    position: absolute; // Positionnement absolu
+    bottom: 10px; // 10px du bas du parent
+    left: 10px; // 10px de la gauche (optionnel)
+    display: flex;
+    align-items: center; // Centre verticalement le contenu (optionnel)
+
+    img {
+      width: 20px;
+      height: 20px; // Conserve les proportions
+    }
+
+    a {
+      display: flex;
+      color: black;
+      gap: 10px;
+      font-size: 15px;
+      align-items: center;
+    }
   }
+
+  // Titre superposé à l'image
+
 
 
   // Overlay UNIQUEMENT sur l'image
@@ -55,11 +87,15 @@
     transition: opacity 0.3s ease;
     border-radius: 15px;
     z-index: 1;
+
+
   }
 
   // Afficher l'overlay au survol de l'image
-  &__image-container:hover &__overlay {
-    opacity: 1; // L'overlay devient opaque UNIQUEMENT au survol de l'image
+  // Afficher le titre et l'overlay au survol
+  &__image-container:hover &__overlay,
+  &__image-container:hover &__title {
+    opacity: 1; // Visible au survol
   }
 
   // Description EN DEHORS de l'overlay
@@ -72,10 +108,9 @@
   }
 }
 
-.buttonTag{
+.buttonTag {
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin-top: 20px;
 }
-
