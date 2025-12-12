@@ -77,25 +77,26 @@ const Home = () => {
             <div className='logo'>
 
                 <a href="https://github.com/PierreSarciat/" target="_blank" rel="noopener noreferrer" > <img src={logoGit} alt="GitHub" /> </a>
-                <a href="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer" > <img src={logoLDN} alt="logo linkdin" /> </a>
+                <a href="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer" > <img src={logoLDN} alt="logo linkdin" id="logoLDN" /> </a>
 
 
             </div>
-
-            <section className="skillsContent" id="competences">
-                <h2 className="skills-content_title">Mes compétences</h2>
-                <div className="skills-grid">
-                    {skills.map((skill, index) => (
-                        <SkillCard
-                            key={index}
-                            img={skill.img}
-                            title={skill.title}
-                            description={skill.description}
-                            alt={skill.alt}
-                        />
-                    ))}
-                </div>
-            </section>
+            <div className='skillsContent__background'>
+                <section className="skillsContent" >
+                    <h2 className="skills-content_title">Mes compétences</h2>
+                    <div className="skills-grid">
+                        {skills.map((skill, index) => (
+                            <SkillCard
+                                key={index}
+                                img={skill.img}
+                                title={skill.title}
+                                description={skill.description}
+                                alt={skill.alt}
+                            />
+                        ))}
+                    </div>
+                </section>
+            </div>
             <section className='project' id="portfolio">
                 <h2>Mes Projets</h2>
                 <p>Découvrez une sélection de mes réalisations récentes</p>
@@ -114,17 +115,19 @@ const Home = () => {
                     ))}
                 </div>
             </section>
-            <section className='aboutMe' id="aboutMe">
-                <h2>A propos</h2>
-                <div className='textMe'>
-                    <p></p>
-                    <p className='text'> Mon objectif est de livrer des applications complètes, optimisées et accessibles, offrant une expérience utilisateur fluide sur tous les supports. Issu du domaine paramédical, j’ai toujours travaillé dans des environnements où l’écoute, la rigueur et l’adaptabilité sont essentielles.<br /> En pleine réflexion sur mon avenir professionnel, j’ai ressenti le besoin d’entamer une reconversion vers un métier qui allie créativité, logique et construction.<br />
-                        C’est au cours de mes recherches que j’ai découvert la formation OpenClassrooms, et j’ai réalisé que le développement web réunissait exactement ce que je recherchais : un secteur dynamique, des projets concrets, la possibilité d’apprendre en continu et surtout la satisfaction de créer des solutions utiles.<br />
-                        Cette transition me permet aujourd’hui de mettre à profit ma méthodologie, ma capacité à résoudre des problèmes et ma volonté d’aider, tout en développant de nouvelles compétences techniques.</p>
-                    <p></p>
-                </div>
+            <div className='aboutMe__Background'>
+                <section className='aboutMe' id="aboutMe">
+                    <h2>A propos</h2>
+                    <div className='textMe'>
+                        <p></p>
+                        <p className='text'> Mon objectif est de livrer des applications complètes, optimisées et accessibles, offrant une expérience utilisateur fluide sur tous les supports. Issu du domaine paramédical, j’ai toujours travaillé dans des environnements où l’écoute, la rigueur et l’adaptabilité sont essentielles.<br /> En pleine réflexion sur mon avenir professionnel, j’ai ressenti le besoin d’entamer une reconversion vers un métier qui allie créativité, logique et construction.<br />
+                            C’est au cours de mes recherches que j’ai découvert la formation OpenClassrooms, et j’ai réalisé que le développement web réunissait exactement ce que je recherchais : un secteur dynamique, des projets concrets, la possibilité d’apprendre en continu et surtout la satisfaction de créer des solutions utiles.<br />
+                            Cette transition me permet aujourd’hui de mettre à profit ma méthodologie, ma capacité à résoudre des problèmes et ma volonté d’aider, tout en développant de nouvelles compétences techniques.</p>
+                        <p></p>
+                    </div>
 
-            </section>
+                </section>
+            </div>
         </div >
     );
 };
