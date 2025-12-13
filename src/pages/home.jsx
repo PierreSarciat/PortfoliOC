@@ -14,6 +14,7 @@ import SkillCard from '@components/SkillCard';
 import logoHTML5 from "@logo/logoHTML5.png";
 import logoBackend from "@logo/logoBackend.png";
 import logoOutils from "@logo/logoOutils.png"
+import ContactForm from '@components/contactForm.jsx'
 
 
 const projects = [
@@ -128,6 +129,10 @@ const Home = () => {
 
                 </section>
             </div>
+            <section className='Contact'>
+                <ContactForm />
+            </section>
+
         </div >
     );
 };
