@@ -57,8 +57,14 @@ const skills = [
     }
 ];
 
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL;
+const contactPhone = import.meta.env.VITE_CONTACT_PHONE;
+const contactLocalisation = import.meta.env.VITE_CONTACT_LOCALISATION;
+
+
 
 const Home = () => {
+    console.log("Email:", import.meta.env.VITE_CONTACT_EMAIL);
     return (
 
         <div className='homeContent'>
@@ -130,7 +136,20 @@ const Home = () => {
                 </section>
             </div>
             <section className='Contact'>
-                <ContactForm />
+                <div className='information'>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>E-mail</p>
+                    <p>{contactEmail}</p>
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Téléphone</p>
+                    <p>{contactPhone}</p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Localisation</p>
+                    <p>{contactLocalisation}</p>
+                </div>
+                <div className='contact'>
+                    <ContactForm />
+                </div>
             </section>
 
         </div >
