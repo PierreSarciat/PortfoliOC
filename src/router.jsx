@@ -21,13 +21,12 @@ const router = createBrowserRouter([
       { path: 'kasa', element: <Kasa /> },
       { path: 'maker', element: <Maker /> },
       { path: 'bluel', element: <Bluel /> },
-      { path: 'carducci', element: <Carducci /> },
       { path: 'booki', element: <Booki /> },
     ]
   },
 ],
   {
-    basename: '/portfolio'
+    basename: '/PortfoliOC'
   }
 );
 
