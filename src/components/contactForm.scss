@@ -1,15 +1,11 @@
+@use "@styles/variable.scss" as *;
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
 
   .form-group {
     margin-bottom: 1rem;
@@ -17,14 +13,14 @@
     label {
       display: block;
       margin-bottom: 0.5rem;
-      font-weight: bold;
+     
     }
 
     input, textarea {
       width: 100%;
       padding: 0.75rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+      border: 1px solid rgba(128, 128, 128, 0.486);
+      border-radius: 8px;
       font-size: 1rem;
     }
 
@@ -38,7 +34,7 @@
     display: block;
     width: 100%;
     padding: 0.75rem;
-    background-color: #007bff;
+    background-color:$primary-colorP;
     color: white;
     border: none;
     border-radius: 4px;
@@ -47,7 +43,7 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: $primary-colorP-hover;
     }
 
     &:disabled {
@@ -67,4 +63,12 @@
     text-align: center;
     margin-top: 1rem;
   }
+}
+
+@media (max-width: 650px){
+
+.contact__container .Contact{
+  display: flex;
+  flex-direction: column;
+}
 }

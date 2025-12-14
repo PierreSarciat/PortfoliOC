@@ -8,38 +8,40 @@ import './footer.scss';
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/#portfolio">
-              Portfolio
-            </NavLink>
-          </li>
-          <div className="nav2">
+    <div className="footer__container">
+      <div className="footer">
+        <nav>
+          <ul>
+            <div className="nav2">
+              <li>
+                <NavLink to="/#apropos">
+                  A propos
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/#competence">
+                  Compétences
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/#projets">
+                  Projets
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/#contact">
+                  Contact
+                </NavLink>
+              </li>
+            </div>
             <li>
-              <NavLink to="/#apropos">
-                A propos
+              <NavLink to="/#portfolio">
+                Portfolio
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/#competence">
-                Compétences
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/#projets">
-                Projets
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/#contact">
-                Contact
-              </NavLink>
-            </li>
-          </div>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 };

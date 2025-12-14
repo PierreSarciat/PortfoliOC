@@ -72,13 +72,24 @@ header {
 
 
 
-@media (max-width: 600px) {
+
+
+    
+  
 
 
 
-  header li a {
+@media (max-width: 600px){
+  
+  .header ul{
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
 
-    font-size: 14px;
+
+   .nav2{
+    flex-wrap: wrap;
+    
+   }
   }
-
 }

@@ -71,7 +71,7 @@ const Home = () => {
 
 
             <h1 className="title">Pierre-Henri Sarciat</h1>
-            <p><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </p >
+            <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
             <section className='about'>
                 <p></p>
                 <p>Développeur Full-Stack, je crée des interfaces performantes avec React et Sass, et développe des API fiables avec Node.js, Express et MongoDB.</p>
@@ -135,25 +135,31 @@ const Home = () => {
 
                 </section>
             </div>
-            <section className='Contact'>
-                <div className='information'>
-                    <div className='info'>
-                        <i class="fa-solid fa-envelope"></i>
-                        <p><span className='item'>E-mail</span><br></br>{contactEmail}</p>
+            <section className='contact__container'>
+                <h2>Contactez-moi</h2>
+                <p><span className='item'>Vous avez un projet en tête ? N'hésitez pas à me contacter</span></p>
+                <div className='Contact'>
+
+                    <div className='information'>
+                        <h3>Informations de contact</h3>
+                        <div className='info'>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p><span className='item'>E-mail</span><br></br>{contactEmail}</p>
+                        </div>
+                        <div className='info'>
+                            <i class="fa-solid fa-phone"></i>
+                            <p><span className='item'>Téléphone</span><br></br>{contactPhone}</p>
+                        </div>
+                        <div className='info'>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p><span className='item'>Localisation</span><br></br>{contactLocalisation}</p>
+                        </div>
                     </div>
-                    <div className='info'>
-                        <i class="fa-solid fa-phone"></i>
-                        <p><span className='item'>Téléphone</span><br></br>{contactPhone}</p>
+                    <div className='contact'>
+                        <ContactForm />
                     </div>
-                    <div className='info'>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p><span className='item'>Localisation</span><br></br>{contactLocalisation}</p>
-                    </div>
-                </div>
-                <div className='contact'>
-                    <ContactForm />
-                </div>
-            </section >
+                </div >
+            </section>
 
         </div >
     );

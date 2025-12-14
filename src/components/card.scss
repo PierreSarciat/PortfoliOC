@@ -101,7 +101,6 @@
   // Description EN DEHORS de l'overlay
   &__description {
     padding: 15px;
-    margin: 0;
     color: #333;
     font-size: 14px;
     text-align: center;
@@ -110,7 +109,11 @@
 
 .buttonTag {
   display: flex;
-  gap: 1rem;
   justify-content: center;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 50px;
+  align-items: center;
+  gap: 20px;
+  left: 50%; 
+  transform: translateX(-50%); 
 }
