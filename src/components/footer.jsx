@@ -12,13 +12,32 @@ const Footer = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="mailto:phsarciat@mailo.com" id="contact" target="_blank" rel="noopener noreferrer"> <img src={MAIL} alt="logo email" className="footer-logo" />phsarciat@mailo.com</NavLink>
+            <NavLink to="/#portfolio">
+              Portfolio
+            </NavLink>
           </li>
-          <li>
-            <NavLink to="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer"> <img src={LKDN} alt="logo linkdin" className="footer-logo" /></NavLink>
-          </li>
-
-
+          <div className="nav2">
+            <li>
+              <NavLink to="/#apropos">
+                A propos
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/#competence">
+                Compétences
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/#projets">
+                Projets
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/#contact">
+                Contact
+              </NavLink>
+            </li>
+          </div>
         </ul>
       </nav>
     </div>

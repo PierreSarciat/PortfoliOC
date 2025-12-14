@@ -157,9 +157,25 @@
   }
 }
 
-.Contact{
+.Contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 20px;
+  align-items: center;
+
+
+  .info {
+    display: flex;
+    align-items: baseline;
+    gap: 2em;
+
+    .item{
+      color: gray;
+    }
+
+
+  }
 }
 
 @media (max-width: 1000px) {

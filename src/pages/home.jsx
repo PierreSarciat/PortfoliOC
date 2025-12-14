@@ -137,20 +137,23 @@ const Home = () => {
             </div>
             <section className='Contact'>
                 <div className='information'>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>E-mail</p>
-                    <p>{contactEmail}</p>
-                    <i class="fa-solid fa-phone"></i>
-                    <p>Téléphone</p>
-                    <p>{contactPhone}</p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Localisation</p>
-                    <p>{contactLocalisation}</p>
+                    <div className='info'>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><span className='item'>E-mail</span><br></br>{contactEmail}</p>
+                    </div>
+                    <div className='info'>
+                        <i class="fa-solid fa-phone"></i>
+                        <p><span className='item'>Téléphone</span><br></br>{contactPhone}</p>
+                    </div>
+                    <div className='info'>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p><span className='item'>Localisation</span><br></br>{contactLocalisation}</p>
+                    </div>
                 </div>
                 <div className='contact'>
                     <ContactForm />
                 </div>
-            </section>
+            </section >
 
         </div >
     );
