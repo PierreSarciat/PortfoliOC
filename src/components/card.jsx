@@ -6,7 +6,7 @@ import ButtonT from "./button-tag.jsx";
 import logoGit from "@logo/logoGitHub.png";
 import Demo from "@logo/demo.png";
 
-const Card = ({ img, title, link, alt, description, tag_text }) => {
+const Card = ({ img, title, alt, description, tag_text, linkGithub, linkDemo }) => {
     const navigate = useNavigate();
     const handleClick = (e) => {
         e.preventDefault();
@@ -40,8 +40,8 @@ const Card = ({ img, title, link, alt, description, tag_text }) => {
                 )}
             </div>
             <div className='logoCard'>
-                <a href="https://github.com/PierreSarciat/" target="_blank" rel="noopener noreferrer" ><img src={logoGit} alt="GitHub" />Code</a>
-                <a href="" target="_blank" rel="noopener noreferrer" ><img src={Demo} alt="demo" />Démo</a>
+                <a href={linkGithub} target="_blank" rel="noopener noreferrer" ><img src={logoGit} alt="GitHub" />Code</a>
+                <a href={linkDemo} target="_blank" rel="noopener noreferrer" ><img src={Demo} alt="demo" />Démo</a>
             </div>
         </div>
     );

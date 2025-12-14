@@ -29,6 +29,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <div className="header-container">
@@ -36,17 +45,12 @@ const Header = () => {
           <ul>
             <li>
               <div className="nav1">
-                <NavLink to="/#portfolio">
+                <NavLink to="#" onClick={scrollToTop}>
                   Portfolio
                 </NavLink>
               </div>
             </li>
             <div className="nav2">
-              <li>
-                <NavLink to="/#apropos">
-                  A propos
-                </NavLink>
-              </li>
               <li>
                 <NavLink to="/#competence">
                   Compétences
@@ -55,6 +59,11 @@ const Header = () => {
               <li>
                 <NavLink to="/#projets">
                   Projets
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/#apropos">
+                  A propos
                 </NavLink>
               </li>
               <li>

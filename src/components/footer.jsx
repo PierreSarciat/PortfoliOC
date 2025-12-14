@@ -6,6 +6,14 @@ import MAIL from '@assets/logo/logoMail.JPG';
 import LKDN from '@assets/logo/logoLDN.png';
 import './footer.scss';
 
+const scrollToTop = (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
 const Footer = () => {
   return (
     <div className="footer__container">
@@ -13,11 +21,7 @@ const Footer = () => {
         <nav>
           <ul>
             <div className="nav2">
-              <li>
-                <NavLink to="/#apropos">
-                  A propos
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink to="/#competence">
                   Compétences
@@ -29,13 +33,18 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/#apropos">
+                  A propos
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to="/#contact">
                   Contact
                 </NavLink>
               </li>
             </div>
             <li>
-              <NavLink to="/#portfolio">
+              <NavLink to="#" onClick={scrollToTop}>
                 Portfolio
               </NavLink>
             </li>

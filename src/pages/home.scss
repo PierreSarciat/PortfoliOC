@@ -55,8 +55,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding-top: 4rem;
+    margin-top: -160px;
+    padding-top: 280px;
     padding-bottom: 6rem;
 
     .skills-content_title {
@@ -93,7 +93,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: -80px;
+  padding-top: 100px;
 }
 
 .projectList {

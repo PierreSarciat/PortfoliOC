@@ -18,7 +18,7 @@ import ContactForm from '@components/contactForm.jsx'
 
 
 const projects = [
-    { img: bookiImg, title: "BOOKI", alt: "Projet Booki", link: "/booki", description: "Création de la page d'accueil d'une agence de voyage", tag_text: ["HTML", "CSS"] },
+    { img: bookiImg, title: "BOOKI", alt: "Projet Booki", description: "Création de la page d'accueil d'une agence de voyage", linkGithub: "https://github.com/PierreSarciat/Booki/tree/projet-definitif", linkDemo: "https://pierresarciat.github.io/Booki/", tag_text: ["HTML", "CSS"] },
     { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", link: "/bluel", tag_text: "JavaScript" },
     { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d'un site de notation de livres", link: "/grimoire", tag_text: ["Node.js", "MongoDB"] },
     { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", link: "/kasa", tag_text: "React" },
@@ -88,7 +88,7 @@ const Home = () => {
 
 
             </div>
-            <div className='skillsContent__background'>
+            <div className='skillsContent__background' id="competence">
                 <section className="skillsContent" >
                     <h2 className="skills-content_title">Mes compétences</h2>
                     <div className="skills-grid">
@@ -104,7 +104,7 @@ const Home = () => {
                     </div>
                 </section>
             </div>
-            <section className='project' id="portfolio">
+            <section className='project' id="projets">
                 <h2>Mes Projets</h2>
                 <p>Découvrez une sélection de mes réalisations récentes</p>
                 <div className='projectList'>
@@ -115,15 +115,17 @@ const Home = () => {
                             img={proj.img}
                             title={proj.title}
                             alt={proj.alt}
-                            link={proj.link}
                             description={proj.description}
                             tag_text={proj.tag_text}
+                            linkGithub={proj.linkGithub}
+                            linkDemo={proj.linkDemo}
+
                         />
                     ))}
                 </div>
             </section>
-            <div className='aboutMe__Background'>
-                <section className='aboutMe' id="aboutMe">
+            <div className='aboutMe__Background' >
+                <section className='aboutMe' id="apropos">
                     <h2>A propos</h2>
                     <div className='textMe'>
                         <p></p>
@@ -135,7 +137,7 @@ const Home = () => {
 
                 </section>
             </div>
-            <section className='contact__container'>
+            <section className='contact__container' id="contact">
                 <h2>Contactez-moi</h2>
                 <p><span className='item'>Vous avez un projet en tête ? N'hésitez pas à me contacter</span></p>
                 <div className='Contact'>
