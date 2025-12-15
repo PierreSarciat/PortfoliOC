@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './header.scss';
 import '../App.scss';
 import { NavLink, useLocation } from "react-router-dom";
+import backgroundImage from '@images/imageFond.webp'
 
 
 const Header = () => {

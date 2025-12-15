@@ -15,13 +15,13 @@ import logoHTML5 from "@logo/logoHTML5.png";
 import logoBackend from "@logo/logoBackend.png";
 import logoOutils from "@logo/logoOutils.png"
 import ContactForm from '@components/contactForm.jsx'
-
+import backgroundImage from '@images/imageFond.webp'
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", description: "Création de la page d'accueil d'une agence de voyage", linkGithub: "https://github.com/PierreSarciat/Booki/tree/projet-definitif", linkDemo: "https://pierresarciat.github.io/Booki/", tag_text: ["HTML", "CSS"] },
     { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", link: "/bluel", tag_text: "JavaScript" },
     { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d'un site de notation de livres", link: "/grimoire", tag_text: ["Node.js", "MongoDB"] },
-    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", link: "/kasa", tag_text: "React" },
+    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", linkGithub: "https://github.com/PierreSarciat/Kasa-immobilier", tag_text: "React" },
 ];
 
 
@@ -68,26 +68,26 @@ const Home = () => {
     return (
 
         <div className='homeContent'>
+            <div className='homeBackground'>
+                <h1 className="title">Pierre-Henri Sarciat</h1>
+                <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
+                <section className='about'>
+                    <p></p>
+                    <p>Développeur Full-Stack, je crée des interfaces performantes avec React et Sass, et développe des API fiables avec Node.js, Express et MongoDB.</p>
+                    <p></p>
+                </section>
+                <div className='buttonHome'>
+                    <ButtonP text="Me contacter" href="#contact" />
+                    <ButtonS text="Voir mes projets" href="" target="_blank" rel="noopener noreferrer" />
+                </div>
+                <div className='logo'>
 
-
-            <h1 className="title">Pierre-Henri Sarciat</h1>
-            <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
-            <section className='about'>
-                <p></p>
-                <p>Développeur Full-Stack, je crée des interfaces performantes avec React et Sass, et développe des API fiables avec Node.js, Express et MongoDB.</p>
-                <p></p>
-            </section>
-            <div className='buttonHome'>
-                <ButtonP text="Me contacter" href="#contact" />
-                <ButtonS text="Voir mes projets" href="" target="_blank" rel="noopener noreferrer" />
+                    <a href="https://github.com/PierreSarciat/" target="_blank" rel="noopener noreferrer" > <img src={logoGit} alt="GitHub" /> </a>
+                    <a href="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer" > <img src={logoLDN} alt="logo linkdin" id="logoLDN" /> </a>
+                </div>
             </div>
-            <div className='logo'>
-
-                <a href="https://github.com/PierreSarciat/" target="_blank" rel="noopener noreferrer" > <img src={logoGit} alt="GitHub" /> </a>
-                <a href="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer" > <img src={logoLDN} alt="logo linkdin" id="logoLDN" /> </a>
 
 
-            </div>
             <div className='skillsContent__background' id="competence">
                 <section className="skillsContent" >
                     <h2 className="skills-content_title">Mes compétences</h2>
