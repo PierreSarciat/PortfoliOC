@@ -14,11 +14,12 @@
 .homeBackground {
     color: white;
     /* Nécessaire pour le positionnement du calque */
-    background-image: url('@images/imageFond.webp');
+    background-image: url('@images/imageFond.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
 }
 
 .header::before,
@@ -29,7 +30,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(11, 11, 13, 0.59);
+    background: rgba(57, 58, 104, 0.38);
     /* Calque noir semi-transparent */
     z-index: 1;
     /* Place le calque au-dessus de l'image de fond */

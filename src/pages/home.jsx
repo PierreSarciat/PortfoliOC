@@ -15,7 +15,6 @@ import logoHTML5 from "@logo/logoHTML5.png";
 import logoBackend from "@logo/logoBackend.png";
 import logoOutils from "@logo/logoOutils.png"
 import ContactForm from '@components/contactForm.jsx'
-import backgroundImage from '@images/imageFond.webp'
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", description: "Création de la page d'accueil d'une agence de voyage", linkGithub: "https://github.com/PierreSarciat/Booki/tree/projet-definitif", linkDemo: "https://pierresarciat.github.io/Booki/", tag_text: ["HTML", "CSS"] },
