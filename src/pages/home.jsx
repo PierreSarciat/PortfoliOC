@@ -76,6 +76,25 @@ const Home = () => {
         return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+        // Observer pour le titre "Mes compétences"
+        const title = document.querySelector(".skills-content_title.fade-in");
+
+        const observer = new IntersectionObserver(
+            ([entry], observer) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.3 } // déclenche quand 30% du titre est visible
+        );
+
+        if (title) observer.observe(title);
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
 
         <div className='homeContent'>
@@ -102,9 +121,9 @@ const Home = () => {
 
             <div className='skillsContent__background' id="competence">
                 <section className="skillsContent" >
-
-                    <h2 className="skills-content_title">Mes compétences</h2>
-
+                    <div className="skills-content_title fade-in">
+                        <h2 className="skills-content_title">Mes compétences</h2>
+                    </div>
                     <div className="skills-grid">
                         {skills.map((skill, index) => (
                             <SkillCard

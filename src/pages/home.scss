@@ -93,7 +93,15 @@
 
 }
 
- 
+ .skills-content_title.fade-in {
+  opacity: 0;
+  transition: opacity 1.5s ease; /* durée de l'animation */
+}
+
+.skills-content_title.fade-in.is-visible {
+  opacity: 1;
+}
+
 
 
 
