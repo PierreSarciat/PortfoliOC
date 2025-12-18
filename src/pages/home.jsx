@@ -1,6 +1,7 @@
 import React from 'react';
 import "./home.scss";
 import Card from '@components/card.jsx';
+import { useState, useEffect } from 'react';
 import bookiImg from '@images/booki.webp';
 import bluelImg from '@images/bluel.webp';
 import grimoireImg from '@images/grimoire.webp';
@@ -18,7 +19,7 @@ import ContactForm from '@components/contactForm.jsx'
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", description: "Création de la page d'accueil d'une agence de voyage", linkGithub: "https://github.com/PierreSarciat/Booki/tree/projet-definitif", linkDemo: "https://pierresarciat.github.io/Booki/", tag_text: ["HTML", "CSS"] },
-    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", linkGitHub: "https://github.com/PierreSarciat/projet3", tag_text: "JavaScript" },
+    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", linkGithub: "https://github.com/PierreSarciat/projet3", tag_text: "JavaScript" },
     { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d'un site de notation de livres", linkGithub: "https://github.com/PierreSarciat/mon-vieux-grimoire", tag_text: ["Node.js", "MongoDB"] },
     { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", linkGithub: "https://github.com/PierreSarciat/Kasa-immobilier", tag_text: "React" },
 ];
@@ -63,7 +64,18 @@ const contactLocalisation = import.meta.env.VITE_CONTACT_LOCALISATION;
 
 
 const Home = () => {
-    console.log("Email:", import.meta.env.VITE_CONTACT_EMAIL);
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        // Déclencher l'animation après un court délai
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 100);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
 
         <div className='homeContent'>
@@ -84,12 +96,15 @@ const Home = () => {
                     <a href="https://github.com/PierreSarciat/" target="_blank" rel="noopener noreferrer" > <img src={logoGit} alt="GitHub" /> </a>
                     <a href="https://www.linkedin.com/in/pierre-henri-sarciat-55728219b" target="_blank" rel="noopener noreferrer" > <img src={logoLDN} alt="logo linkdin" id="logoLDN" /> </a>
                 </div>
+
             </div>
 
 
             <div className='skillsContent__background' id="competence">
                 <section className="skillsContent" >
+
                     <h2 className="skills-content_title">Mes compétences</h2>
+
                     <div className="skills-grid">
                         {skills.map((skill, index) => (
                             <SkillCard

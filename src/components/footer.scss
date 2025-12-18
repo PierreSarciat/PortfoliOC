@@ -1,7 +1,9 @@
 @use "../styles/variable.scss" as *;
 
 .footer__container {
-  background-color: black;
+  color: $titlecolor;
+  background-color: rgba(65, 51, 30, 0.1);
+
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding-left: calc(50vw - 50%);
@@ -18,7 +20,7 @@
       gap: 2.5em;
       list-style: none;
       padding-right: 20px;
-      color: white;
+
 
       .nav2 {
         display: flex;
