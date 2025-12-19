@@ -15,8 +15,10 @@ import SkillCard from '@components/SkillCard';
 import logoHTML5 from "@logo/logoHTML5.png";
 import logoBackend from "@logo/logoBackend.png";
 import logoOutils from "@logo/logoOutils.png";
-import SkillsContent from '../components/skillsContent.jsx';
+import SkillsContent from '@components/skillsContent.jsx';
 import ContactForm from '@components/contactForm.jsx'
+import ProjectsSection from '@components/projectsSection.jsx';
+import ContactSection from '@components/contactSection.jsx';
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", description: "Création de la page d'accueil d'une agence de voyage", linkGithub: "https://github.com/PierreSarciat/Booki/tree/projet-definitif", linkDemo: "https://pierresarciat.github.io/Booki/", tag_text: ["HTML", "CSS"] },
@@ -103,65 +105,18 @@ const Home = () => {
 
             <SkillsContent skills={skills} /> {/* Utilisez le composant SkillsContent */}
 
-            <section className='project' id="projets">
-                <h2>Mes Projets</h2>
-                <p>Découvrez une sélection de mes réalisations récentes</p>
-                <div className='projectList'>
+            <ProjectsSection projects={projects} />
 
-                    {projects.map((proj, index) => (
-                        <Card
-                            key={index}
-                            img={proj.img}
-                            title={proj.title}
-                            alt={proj.alt}
-                            description={proj.description}
-                            tag_text={proj.tag_text}
-                            linkGithub={proj.linkGithub}
-                            linkDemo={proj.linkDemo}
-
-                        />
-                    ))}
-                </div>
-            </section>
-            <div className='aboutMe__Background' >
-                <section className='aboutMe' id="apropos">
-                    <h2>A propos</h2>
-                    <div className='textMe'>
-                        <p></p>
-                        <p className='text'> Mon objectif est de livrer des applications complètes, optimisées et accessibles, offrant une expérience utilisateur fluide sur tous les supports. Issu du domaine paramédical, j’ai toujours travaillé dans des environnements où l’écoute, la rigueur et l’adaptabilité sont essentielles.<br /> En pleine réflexion sur mon avenir professionnel, j’ai ressenti le besoin d’entamer une reconversion vers un métier qui allie créativité, logique et construction.<br />
-                            C’est au cours de mes recherches que j’ai découvert la formation OpenClassrooms, et j’ai réalisé que le développement web réunissait exactement ce que je recherchais : un secteur dynamique, des projets concrets, la possibilité d’apprendre en continu et surtout la satisfaction de créer des solutions utiles.<br />
-                            Cette transition me permet aujourd’hui de mettre à profit ma méthodologie, ma capacité à résoudre des problèmes et ma volonté d’aider, tout en développant de nouvelles compétences techniques.</p>
-                        <p></p>
-                    </div>
-
-                </section>
-            </div>
             <section className='contact__container' id="contact">
                 <h2>Contactez-moi</h2>
                 <p><span className='item'>Vous avez un projet en tête ? N'hésitez pas à me contacter</span></p>
-                <div className='Contact'>
 
-                    <div className='information'>
-                        <h3>Informations de contact</h3>
-                        <div className='info'>
-                            <i class="fa-solid fa-envelope"></i>
-                            <p><span className='item'>E-mail</span><br></br>{contactEmail}</p>
-                        </div>
-                        <div className='info'>
-                            <i class="fa-solid fa-phone"></i>
-                            <p><span className='item'>Téléphone</span><br></br>{contactPhone}</p>
-                        </div>
-                        <div className='info'>
-                            <i class="fa-solid fa-location-dot"></i>
-                            <p><span className='item'>Localisation</span><br></br>{contactLocalisation}</p>
-                        </div>
-                    </div>
-                    <div className='contact'>
-                        <ContactForm />
-                    </div>
-                </div >
+                <ContactSection
+                    contactEmail={contactEmail}
+                    contactPhone={contactPhone}
+                    contactLocalisation={contactLocalisation}
+                />
             </section>
-
         </div >
     );
 };

@@ -1,0 +1,33 @@
+.Contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  max-width: 800px;
+  margin: 50px auto;
+ 
+}
+
+/* état initial */
+.information {
+  transform: translateX(-80px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.contact {
+  transform: translateX(80px);
+  transition-delay: 0.15s;
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* état animé */
+.Contact.merged .information,
+.Contact.merged .contact {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+
