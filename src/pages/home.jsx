@@ -14,7 +14,8 @@ import logoLDN from "@logo/logoLDN.png"
 import SkillCard from '@components/SkillCard';
 import logoHTML5 from "@logo/logoHTML5.png";
 import logoBackend from "@logo/logoBackend.png";
-import logoOutils from "@logo/logoOutils.png"
+import logoOutils from "@logo/logoOutils.png";
+import SkillsContent from '../components/skillsContent.jsx';
 import ContactForm from '@components/contactForm.jsx'
 
 const projects = [
@@ -76,25 +77,6 @@ const Home = () => {
         return () => clearTimeout(timer);
     }, []);
 
-    useEffect(() => {
-        // Observer pour le titre "Mes compétences"
-        const title = document.querySelector(".skills-content_title.fade-in");
-
-        const observer = new IntersectionObserver(
-            ([entry], observer) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                }
-            },
-            { threshold: 0.3 } // déclenche quand 30% du titre est visible
-        );
-
-        if (title) observer.observe(title);
-
-        return () => observer.disconnect();
-    }, []);
-
     return (
 
         <div className='homeContent'>
@@ -119,24 +101,8 @@ const Home = () => {
             </div>
 
 
-            <div className='skillsContent__background' id="competence">
-                <section className="skillsContent" >
-                    <div className="skills-content_title fade-in">
-                        <h2 className="skills-content_title">Mes compétences</h2>
-                    </div>
-                    <div className="skills-grid">
-                        {skills.map((skill, index) => (
-                            <SkillCard
-                                key={index}
-                                img={skill.img}
-                                title={skill.title}
-                                description={skill.description}
-                                alt={skill.alt}
-                            />
-                        ))}
-                    </div>
-                </section>
-            </div>
+            <SkillsContent skills={skills} /> {/* Utilisez le composant SkillsContent */}
+
             <section className='project' id="projets">
                 <h2>Mes Projets</h2>
                 <p>Découvrez une sélection de mes réalisations récentes</p>
