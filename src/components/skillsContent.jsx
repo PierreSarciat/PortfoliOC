@@ -14,7 +14,7 @@ const SkillsContent = ({ skills }) => {
                     observer.disconnect(); // une seule fois
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.4 }
         );
 
         if (sectionRef.current) observer.observe(sectionRef.current);
