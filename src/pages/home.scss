@@ -28,7 +28,7 @@
 }
 
 
-.header,
+.header-container,
 .homeBackground {
     color: white;
     /* Nécessaire pour le positionnement du calque */
@@ -40,7 +40,7 @@
 
 }
 
-.header::before,
+.header-container::before,
 .homeBackground::before {
     content: "";
     position: absolute;
