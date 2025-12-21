@@ -14,6 +14,21 @@ const scrollToTop = (e) => {
   });
 };
 
+const scrollToSection = (e, id) => {
+  e.preventDefault();
+  const element = document.querySelector(id);
+  if (element) {
+    const headerOffset = 100; // Hauteur du header + marge souhaitée
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
 const Footer = () => {
   return (
     <div className="footer__container">
@@ -33,7 +48,7 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/#projets">
+                <NavLink to="/#projets" onClick={(e) => scrollToSection(e, "#projets")}>
                   Projets
                 </NavLink>
               </li>
