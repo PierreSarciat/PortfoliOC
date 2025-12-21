@@ -1,28 +1,69 @@
 .aboutMe__Background {
 
-  background-color: white;
-  width: 100vw;
+    background-color: white;
+    width: 100vw;
 
 
-  .aboutMe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 20px;
-   
+    .aboutMe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 20px;
 
-    .textMe {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      ;
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            
+        }
+
+        .typing-animation {
+            white-space: nowrap;
+            overflow: hidden;
+            animation:
+                blink-caret 0.75s step-end infinite,
+                typing 3s steps(12) 1; // 12 = nombre de caractères (espace inclus)
+
+            @keyframes typing {
+                from {
+                    width: 0
+                }
+
+                to {
+                    width: 100%
+                }
+            }
+
+            @keyframes blink-caret {
+
+                from,
+                to {
+                    border-color: transparent
+                }
+
+                50% {
+                    border-color: #2D3748;
+                }
+            }
+        }
+
+
+        .textMe {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            ;
+        }
+
+        .text {
+            padding: 20px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+
+        }
     }
+}
 
-    .text {
-      padding: 20px;
-      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-      border-radius: 20px;
-
-    }
-  }
+.aboutMe__Background .textMe.show {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -14,7 +14,7 @@ import logoHTML5 from "@logo/logoHTML5.png";
 import logoBackend from "@logo/logoBackend.png";
 import logoOutils from "@logo/logoOutils.png";
 import SkillsContent from '@components/skillsContent.jsx';
-import AboutMe from '../components/aboutMe';
+import AboutMe from '@components/aboutMe';
 import ProjectsSection from '@components/projectsSection.jsx';
 import ContactSection from '@components/contactSection.jsx';
 
@@ -61,6 +61,7 @@ const skills = [
 const contactEmail = import.meta.env.VITE_CONTACT_EMAIL;
 const contactPhone = import.meta.env.VITE_CONTACT_PHONE;
 const contactLocalisation = import.meta.env.VITE_CONTACT_LOCALISATION;
+
 
 
 

@@ -178,18 +178,13 @@
   border-radius: 20px;
   margin-top: 30px;
   max-width: 1240px;
-
+  padding: 20px;
 }
 
 
 @media (max-width: 1000px) {
 
   .skillsContent .skills {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .projectList {
     grid-template-columns: 1fr;
     gap: 16px;
   }
