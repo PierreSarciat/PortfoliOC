@@ -81,7 +81,7 @@ const Home = () => {
 
     return (
 
-        <div className='homeContent'>
+        <>
             <div className='homeBackground'>
                 <h1 className="title">Pierre-Henri Sarciat</h1>
                 <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
@@ -92,7 +92,7 @@ const Home = () => {
                 </section>
                 <div className='buttonHome'>
                     <ButtonP text="Me contacter" href="#contact" />
-                    <ButtonS text="Voir mes projets" href="" target="_blank" rel="noopener noreferrer" />
+                    <ButtonS id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.html`} target="_blank" rel="noopener noreferrer" />
                 </div>
                 <div className='logo'>
 
@@ -146,7 +146,7 @@ const Home = () => {
                     contactLocalisation={contactLocalisation}
                 />
             </section>
-        </div >
+        </ >
     );
 };
 export default Home;
