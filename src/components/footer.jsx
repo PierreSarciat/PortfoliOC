@@ -28,15 +28,16 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/#projets">
-                  Projets
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/#apropos">
                   A propos
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/#projets">
+                  Projets
+                </NavLink>
+              </li>
+
               <li>
                 <NavLink to="/#contact">
                   Contact
