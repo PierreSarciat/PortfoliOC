@@ -1,11 +1,14 @@
 @use "@styles/variable.scss" as *;
 
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+
+}
 
 
 header {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   padding: 20px;
@@ -14,16 +17,13 @@ header {
   transition: background-color 0.5s ease, box-shadow 0.5s ease-in-out;
 
   &-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
 
- 
+
 
   &.scrolled {
     color: $titlecolor;

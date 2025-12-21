@@ -1,15 +1,10 @@
 @use "../styles/variable.scss" as *;
 
 .footer__container {
-  color: $titlecolor;
-  background-color: rgba(65, 51, 30, 0.1);
-
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding-left: calc(50vw - 50%);
+  color: white;
+  background-color: black;
 
   .footer {
-    margin-top: 20px;
     padding: 30px 0px 30px 0px;
     max-width: 1240px;
 
@@ -49,11 +44,6 @@
   }
 }
 
-.header-container {
-  max-width: 1240px;
-  margin: 0 auto;
-
-}
 
 
 
