@@ -20,9 +20,9 @@ import ContactSection from '@components/contactSection.jsx';
 
 const projects = [
     { img: bookiImg, title: "BOOKI", alt: "Projet Booki", description: "Création de la page d'accueil d'une agence de voyage", linkGithub: "https://github.com/PierreSarciat/Booki/tree/projet-definitif", linkDemo: "https://pierresarciat.github.io/Booki/", tag_text: ["HTML", "CSS"] },
-    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", linkGithub: "https://github.com/PierreSarciat/projet3", tag_text: "JavaScript" },
-    { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d'un site de notation de livres", linkGithub: "https://github.com/PierreSarciat/mon-vieux-grimoire", tag_text: ["Node.js", "MongoDB"] },
-    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", linkGithub: "https://github.com/PierreSarciat/Kasa-immobilier", linkDemo: "https://kasa-immobilierreact.vercel.app/", tag_text: "React" },
+    { img: bluelImg, title: "SOPHIE BLUEL", alt: "Projet Sophie Bluel", description: "Développement d’une galerie dynamique avec une interface d’administration sécurisée.", linkGithub: "https://github.com/PierreSarciat/projet3", linkDemo: "https://www.figma.com/proto/kfKHknHySoTibZfdolGAX6/Sophie-Bluel---Desktop?node-id=2-2&p=f&t=xeLfFTlLuNibgHKP-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2", tag_text: "JavaScript" },
+    { img: grimoireImg, title: "MON VIEUX GRIMOIRE", alt: "Projet Mon Vieux Grimoire", description: "Création du back-end d'un site de notation de livres", linkGithub: "https://github.com/PierreSarciat/mon-vieux-grimoire", linkDemo: "https://www.figma.com/proto/Snidyc45xi6qchoOPabMA9/Maquette-Mon-Vieux-Grimoir?node-id=3-2&p=f&t=3FZnuOZI0nynyze9-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A2", tag_text: ["Node.js", "MongoDB"] },
+    { img: kasaImg, title: "KASA", alt: "Projet Kasa", description: "Implémenter le front-end d’une application de location immobilière en utilisant React et React Router", linkGithub: "https://github.com/PierreSarciat/Kasa-immobilier", linkDemo: "https://kasa-immobilierreact.vercel.app/", tag_text: "React/Vite" },
 ];
 
 

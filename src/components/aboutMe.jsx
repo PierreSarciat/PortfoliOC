@@ -1,31 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AboutMe.scss';
 
 const AboutMe = () => {
+    const sectionRef = useRef(null);
     const [displayedText, setDisplayedText] = useState('');
-    const fullText = "A propos";
-    const [showContent, setShowContent] = useState(false);
+    const [hasStarted, setHasStarted] = useState(false);
+
+    const fullText = 'A propos';
 
     useEffect(() => {
-        let currentIndex = 0;
-        const intervalId = setInterval(() => {
-            if (currentIndex <= fullText.length) {
-                setDisplayedText(fullText.substring(0, currentIndex));
-                currentIndex++;
-            } else {
-                clearInterval(intervalId);
-                setShowContent(true);
-            }
-        }, 100); // Vitesse d'apparition des lettres (ms)
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasStarted) {
+                    setHasStarted(true);
+                }
+            },
+            { threshold: 0.4 }
+        );
 
-        return () => clearInterval(intervalId);
-    }, []);
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [hasStarted]);
+
+    useEffect(() => {
+        if (!hasStarted) return;
+
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index <= fullText.length) {
+                setDisplayedText(fullText.slice(0, index));
+                index++;
+            } else {
+                clearInterval(interval);
+            }
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, [hasStarted]);
 
     return (
-        <div className='aboutMe__Background'>
-            <section className='aboutMe' id="apropos">
-                <h2 className="typing-animation">{displayedText}</h2>
-                {showContent && (
+        <div className="aboutMe__Background" ref={sectionRef}>
+            <section className="aboutMe" id="apropos">
+                <h2 className="typing-title">
+                    {displayedText}
+                </h2>
+
+                {hasStarted && (
                     <div className='textMe'>
                         <p></p>
                         <p className='text'>
@@ -55,3 +78,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+

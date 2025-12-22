@@ -11,6 +11,7 @@
   cursor: pointer;
   transition: border-colorS 0.2s ease-in-out; 
   text-decoration: none;
+  text-align: center;
 
   &:hover {
     border-color: $border-colorS-hover;
