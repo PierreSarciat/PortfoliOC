@@ -1,20 +1,27 @@
 import React, { useState, useEffect } from "react";
 import './header.scss';
 import '../App.scss';
-import { NavLink, useLocation } from "react-router-dom";
-import backgroundImage from '@images/imageFond.webp'
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 
 const Header = () => {
 
   const location = useLocation();
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        const headerOffset = 100; // Hauteur du header + marge souhaitée
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     }
   }, [location]);
@@ -32,6 +39,7 @@ const Header = () => {
 
   const scrollToTop = (e) => {
     e.preventDefault();
+    navigate('/'); // Réinitialise l'URL
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -40,6 +48,7 @@ const Header = () => {
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
+    navigate(id); // Met à jour l'URL
     const element = document.querySelector(id);
     if (element) {
       const headerOffset = 100; // Hauteur du header + marge souhaitée
@@ -50,17 +59,18 @@ const Header = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
+
     }
   };
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
+    <header className={`header ${scrolled ? "scrolled" : ""}`} >
       <div className="header-container">
         <nav>
           <ul>
             <li>
               <div className="nav1">
-                <NavLink to="#" onClick={scrollToTop}>
+                <NavLink to="/" onClick={scrollToTop}>
                   Portfolio
                 </NavLink>
               </div>
