@@ -100,15 +100,11 @@
   }
 
   .logo {
-
     display: flex;
-
     gap: 3em;
-
     margin-bottom: 30px;
-
     align-items: center;
-
+    filter: invert(1);
 
 
     img {
@@ -205,6 +201,12 @@
 }
 
 @media (max-width: 600px) {
+
+  .main-container {
+    background-image: url('@images/imageFond.jpg');
+
+  }
+
 
   .buttonHome {
     flex-direction: column;
