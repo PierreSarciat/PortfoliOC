@@ -3,6 +3,8 @@ import './header.scss';
 import '../App.scss';
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
+const HEADER_OFFSET = 100;
+
 
 const Header = () => {
 
@@ -11,56 +13,42 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        const headerOffset = 100; // Hauteur du header + marge souhaitée
-        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
+    if (!location.hash) return;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }
-  }, [location]);
+    const element = document.querySelector(location.hash);
+    if (!element) return;
+
+    const y =
+      element.getBoundingClientRect().top +
+      window.scrollY -
+      HEADER_OFFSET;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  }, [location.hash]);
 
 
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const scrollToTop = (e) => {
     e.preventDefault();
-    navigate('/'); // Réinitialise l'URL
+    navigate("/", { replace: true });
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
 
-  const scrollToSection = (e, id) => {
+  const goTo = (e, hash) => {
     e.preventDefault();
-    navigate(id); // Met à jour l'URL
-    const element = document.querySelector(id);
-    if (element) {
-      const headerOffset = 100; // Hauteur du header + marge souhaitée
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = elementPosition - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-
-    }
+    navigate(`/${hash}`);
   };
 
   return (
@@ -77,23 +65,23 @@ const Header = () => {
             </li>
             <div className="nav2">
               <li>
-                <NavLink to="/#competence">
+                <NavLink to="/#competence" onClick={(e) => goTo(e, "#competence")}>
                   Compétences
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/#apropos">
+                <NavLink to="/#apropos" onClick={(e) => goTo(e, "#apropos")}>
                   A propos
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/#projets" onClick={(e) => scrollToSection(e, "#projets")}>
+                <NavLink to="/#projets" onClick={(e) => goTo(e, "#projets")}>
                   Projets
                 </NavLink>
               </li>
 
               <li>
-                <NavLink to="/#contact">
+                <NavLink to="/#contact" onClick={(e) => goTo(e, "#contact")}>
                   Contact
                 </NavLink>
               </li>
