@@ -63,7 +63,11 @@ header {
       &:hover,
       &:focus,
       &:active {
+<<<<<<< Updated upstream
         color: rgba(14, 31, 124, 0.4509803922);
+=======
+        color: $colorA;
+>>>>>>> Stashed changes
         ;
       }
     }
