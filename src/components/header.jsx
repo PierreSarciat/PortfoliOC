@@ -95,7 +95,4 @@ const Header = () => {
 
 export default Header
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
