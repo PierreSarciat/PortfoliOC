@@ -15,7 +15,7 @@ const AboutMe = () => {
                     setHasStarted(true);
                 }
             },
-            { threshold: 0.4 }
+            { threshold: 0.6 }
         );
 
         if (sectionRef.current) {
@@ -36,7 +36,7 @@ const AboutMe = () => {
             } else {
                 clearInterval(interval);
             }
-        }, 100);
+        }, 130);
 
         return () => clearInterval(interval);
     }, [hasStarted]);
