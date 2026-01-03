@@ -14,7 +14,7 @@ const ContactSection = ({ contactEmail, contactPhone, contactLocalisation }) => 
                     observer.unobserve(entry.target);
                 }
             },
-            { threshold: 0.1 }
+            { threshold: 0.2 }
         );
 
         if (contactRef.current) {
