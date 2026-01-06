@@ -91,7 +91,7 @@ const Home = () => {
                 </section>
                 <div className='buttonHome'>
                     <ButtonP text="Me contacter" href="#contact" />
-                    <ButtonS id="CV" text="Mon CV" href="https://www.canva.com/design/DAG9k3AxJx0/4lrG_GBFDkWjdAjGRo6Kdg/view" target="_blank" rel="noopener noreferrer" />
+                    <ButtonS id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.pdf`} target="_blank" rel="noopener noreferrer" />
                 </div>
                 <div className='logo'>
 
