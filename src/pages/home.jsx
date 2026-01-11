@@ -86,7 +86,7 @@ const Home = () => {
                 <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
                 <section className='about'>
                     <p></p>
-                    <p>Développeur Full-Stack, je crée des interfaces performantes avec React et JavaScript, et développe des API fiables avec Node.js, Express et MongoDB.</p>
+                    <p>Développeur web junior orienté front-end, spécialisé en React et JavaScript, avec une approche agile du développement (Scrum, Trello) et une attention particulière à l’expérience utilisateur.</p>
                     <p></p>
                 </section>
                 <div className='buttonHome'>
