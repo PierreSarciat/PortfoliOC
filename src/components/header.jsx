@@ -58,11 +58,11 @@ const Header = () => {
 
       const offset = 350;
 
-      if (window.scrollY > heroHeight + offset) {
+      /*if (window.scrollY > heroHeight + offset) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
-      }
+      }*/
     };
 
     window.addEventListener("scroll", handleScroll);
