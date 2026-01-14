@@ -51,6 +51,25 @@ const Header = () => {
     navigate(`/${hash}`);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector("header");
+      const heroHeight = document.querySelector(".hero")?.offsetHeight || 300;
+
+      const offset = 350;
+
+      if (window.scrollY > heroHeight + offset) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`} >
       <div className="header-container">
