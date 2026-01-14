@@ -3,49 +3,50 @@
 .card {
   background-color: white;
   position: relative;
-  border-radius: 20px;
-  padding: 5px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; // Transition pour le déplacement
-  height: 400px;
+  height: 430px;
 
   &__title {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    color: $text-colorP;
     padding: 10px;
     margin: 0;
-    font-size: 1.2rem;
-    font-weight: 550;
-    text-align: center;
-    z-index: 2;
-    opacity: 0; // Masqué par défaut
-    transition: opacity 0.3s ease; // Animation fluide
   }
 
+  &__description {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+
+  }
+
+
   &:hover {
-    transform: translateY(-5px); // Déplacement au survol
+    transform: translateY(-10px); // Déplacement au survol
   }
 
   // Conteneur pour l'image et son overlay
   &__image-container {
     position: relative;
     width: 100%;
-    height: 200px;
-    border-radius: 15px;
+    height: 250px;
     overflow: hidden;
 
     .card__image {
       width: 100%;
-      height: 200px;
-      border-radius: 30px;
+      height: 100%;
       object-fit: cover;
-      object-position: top;
       display: block;
     }
+
+
   }
 
   .logoCard {
@@ -71,47 +72,31 @@
     }
   }
 
-  // Titre superposé à l'image
-
-
 
   // Overlay UNIQUEMENT sur l'image
   &__overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0; // équivalent à top:0; left:0; right:0; bottom:0
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 15px;
     z-index: 1;
 
 
   }
 
-  // Afficher l'overlay au survol de l'image
-  // Afficher le titre et l'overlay au survol
   &__image-container:hover &__overlay,
-  &__image-container:hover &__title {
+  &__image-container:hover &__description {
     opacity: 1; // Visible au survol
   }
 
-  // Description EN DEHORS de l'overlay
-  &__description {
-    padding: 15px;
-    color: #333;
-    font-size: 14px;
-    text-align: center;
-  }
 }
 
 .buttonTag {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 55px;
   align-items: center;
   gap: 20px;
   left: 50%;
@@ -128,15 +113,8 @@
   .card {
     height: 600px;
 
-
     &__image-container {
       height: 400px;
-
-
-      .card__image {
-        height: 400px;
-      }
-
     }
   }
 }
