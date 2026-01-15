@@ -11,6 +11,7 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const [outHero, setOutHero] = useState(false);
 
   useEffect(() => {
     if (!location.hash) return;
@@ -30,13 +31,6 @@ const Header = () => {
   }, [location.hash]);
 
 
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   const scrollToTop = (e) => {
     e.preventDefault();
     navigate("/", { replace: true });
@@ -52,26 +46,34 @@ const Header = () => {
   };
 
   useEffect(() => {
+    const hero = document.querySelector(".hero");
+    const heroHeight = hero?.offsetHeight || 300;
+    const DESKTOP_OFFSET = 400;
+    const MOBILE_OFFSET = 550;
+
     const handleScroll = () => {
-      const header = document.querySelector("header");
-      const heroHeight = document.querySelector(".hero")?.offsetHeight || 300;
+      const scrollY = window.scrollY;
 
-      const offset = 350;
+      // Fond immédiat dès qu'on scroll
+      setScrolled(scrollY > 0);
 
-      /*if (window.scrollY > heroHeight + offset) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }*/
+      // Changement de couleur uniquement après le hero
+      const offset = window.innerWidth <= 768 ? MOBILE_OFFSET : DESKTOP_OFFSET;
+      setOutHero(scrollY > heroHeight + offset);
     };
 
+    // Ajouter l'écouteur de scroll
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
+    // Nettoyage lors du démontage du composant
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // [] = ne s'exécute qu'au montage
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`} >
+    <header className={`header ${scrolled ? "scrolled" : ""} ${outHero ? "out-hero" : ""}`}>
+
       <div className="header-container">
         <nav>
           <ul>
