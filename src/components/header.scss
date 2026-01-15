@@ -40,38 +40,40 @@ header {
     color: $titlecolor;
   }
 
-}
-
-
-ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 2.5em;
-  list-style: none;
-  padding-right: 20px;
-
-  .nav2 {
+  ul {
     display: flex;
+    justify-content: space-between;
     gap: 2.5em;
-  }
-}
+    list-style: none;
+    padding-right: 20px;
 
-li {
-  a {
-    color: inherit;
-    text-decoration: none;
-    position: relative;
-    font-size: 17px;
-
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $colorA;
-
+    .nav2 {
+      display: flex;
+      gap: 2.5em;
     }
   }
+
+  li {
+    a {
+      color: inherit;
+      text-decoration: none;
+      position: relative;
+      font-size: 17px;
+
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $colorA;
+
+      }
+    }
+  }
+
 }
+
+
+
 
 
 
