@@ -1,6 +1,6 @@
 import React from "react";
 import "./card.scss";
-import ButtonT from "./button-tag.jsx";
+import ButtonT from "@components/button/button-tag.jsx";
 import logoGit from "@logo/logoGitHub.png";
 import Demo from "@logo/demo.png";
 

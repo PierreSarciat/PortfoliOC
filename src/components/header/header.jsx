@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './header.scss';
-import '../App.scss';
+import '../../App.scss';
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const HEADER_OFFSET = 100;
