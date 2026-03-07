@@ -1,0 +1,223 @@
+@use "@styles/variable.scss" as *;
+
+.main-container {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background-image: url('@images/imageFond.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+
+.homeContent {
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0;
+
+  .homeBackground {
+    color: white;
+    margin: -81px;
+    padding: 81px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+  .homeBackground::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 51, 30, 0.38);
+    /* Calque noir semi-transparent */
+    z-index: 1;
+    /* Place le calque au-dessus de l'image de fond */
+
+  }
+
+  /* Assurez-vous que le contenu est au-dessus du calque */
+
+  .homeBackground>* {
+    position: relative;
+    z-index: 2;
+  }
+
+
+
+
+  .titleProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-top: 30px;
+
+
+  }
+
+
+
+  .title {
+    font-size: 35px;
+  }
+
+  .highlight {
+    color: rgb(236, 237, 243);
+    font-weight: 900;
+  }
+
+  .presentation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-top: 100px;
+  }
+
+  .logo {
+    display: flex;
+    gap: 3em;
+    margin-bottom: 30px;
+    align-items: center;
+    filter: invert(1);
+
+
+    img {
+
+      width: 50px;
+
+      height: auto;
+
+
+
+
+
+    }
+
+  }
+
+
+
+  #logoLDN {
+
+    width: 107px;
+
+    height: auto;
+
+  }
+
+
+
+  .buttonHome {
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+
+  }
+
+
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8FAFC;
+  width: 100vw;
+  text-align: center;
+  padding: 20px;
+
+}
+
+.projectList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 30px;
+  max-width: 1240px;
+  padding: 20px;
+}
+
+
+@media (max-width: 1000px) {
+
+  .skillsContent .skills {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .homeContent .title {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .main-container {
+    background-image: url('@images/imageFond.jpg');
+
+  }
+
+
+  .buttonHome {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .homeContent {
+    font-size: 15px;
+  }
+
+
+  .aboutMe .textMe,
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
