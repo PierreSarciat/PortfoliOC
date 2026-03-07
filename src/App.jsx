@@ -1,22 +1,15 @@
 import './App.scss';
 import { Outlet } from "react-router-dom";
-import Header from '@components/header.jsx';
-import Footer from '@components/footer.jsx';
-import ScrollToTop from '@components/scrollToTop';
-
+import Header from '@components/header/header.jsx';
+import Footer from '@components/footer/footer.jsx';
+import ScrollToTop from '@components/ScrollToTop/scrollToTop.jsx';
 
 
 function App() {
   return (
     <>
       <ScrollToTop />
-      <div className="main-container">
-        <Header />
-        <main className="homeContent">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      hero
     </>
   );
 }
