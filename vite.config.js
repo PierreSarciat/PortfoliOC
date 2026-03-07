@@ -15,11 +15,12 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@components': path.resolve(__dirname, './src/components'),
-      '@pages': path.resolve(__dirname, './src/pages'),
+      '@secions': path.resolve(__dirname, './src/sections'),
       '@styles': path.resolve(__dirname, './src/styles'),
        '@images': path.resolve(__dirname, './public/images'),
        '@assets': path.resolve(__dirname, './src/assets'),
-        '@logo': path.resolve(__dirname, './src/assets/logo')       
+        '@logo': path.resolve(__dirname, './src/assets/logo'),
+        '@hooks':fileURLToPath(new URL('./src/hooks', import.meta.url)),      
     },
   },
  
