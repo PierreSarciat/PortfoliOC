@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import './header.scss';
+import './navbar.scss';
 import '../../App.scss';
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const HEADER_OFFSET = 100;
 
 
-const Header = () => {
+const Navbar = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -114,6 +114,6 @@ const Header = () => {
   );
 };
 
-export default Header
+export default Navbar
 
 

@@ -20,7 +20,8 @@ export default defineConfig({
        '@images': path.resolve(__dirname, './public/images'),
        '@assets': path.resolve(__dirname, './src/assets'),
         '@logo': path.resolve(__dirname, './src/assets/logo'),
-        '@hooks':fileURLToPath(new URL('./src/hooks', import.meta.url)),      
+        '@hooks':fileURLToPath(new URL('./src/hooks', import.meta.url)), 
+        '@pages':path.resolve(__dirname, './src/pages')
     },
   },
  
