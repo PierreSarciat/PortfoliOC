@@ -1,8 +1,44 @@
 import { useEffect, useRef, useState } from "react";
 import SkillCard from "@components/skillCard/skillCard.jsx";
+import logoHTML5 from "@logo/logoHTML5.png";
+import logoBackend from "@logo/logoBackend.png";
+import logoOutils from "@logo/logoOutils.png";
+
 import "./skillsContent.scss";
 
-const SkillsContent = ({ skills }) => {
+const skillsData = [
+    {
+        img: logoHTML5,
+        title: "Front End",
+        description: [
+            { items: ["JavaScript", "HTML5/SCSS"] },
+            { items: ["React/Vite"] }
+        ],
+        alt: "Logo Front End"
+    },
+    {
+        img: logoBackend,
+        title: "Back End",
+        description: [
+            { items: ["Node.js", "Express.js"] },
+            { items: ["MongoDB"] },
+            { items: ["API REST"] }
+        ],
+        alt: "Logo Back End"
+    },
+    {
+        img: logoOutils,
+        title: "Outils et Tests",
+        description: [
+            { items: ["Git/GitHub"] },
+            { items: ["Visual Studio"] },
+            { items: ["SEO"] }
+        ],
+        alt: "Logo Outils"
+    }
+];
+
+const SkillsContent = () => {
     const sectionRef = useRef(null);
     const [visible, setVisible] = useState(false);
 
@@ -36,7 +72,7 @@ const SkillsContent = ({ skills }) => {
 
                 {/* CARTES */}
                 <div className="skills-grid">
-                    {skills.map((skill, index) => (
+                    {skillsData.map((skill, index) => (
                         <SkillCard
                             key={index}
                             index={index}
