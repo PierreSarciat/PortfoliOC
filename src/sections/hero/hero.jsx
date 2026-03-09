@@ -30,7 +30,7 @@ const Hero = () => {
     return (
 
         <>
-            <div className='homeBackground'>
+            <div className='heroBackground'>
                 <h1 className="title">Pierre-Henri Sarciat</h1>
                 <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
                 <section className='about'>
