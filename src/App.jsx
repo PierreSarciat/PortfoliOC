@@ -5,7 +5,7 @@ import Hero from '@sections/hero/hero.jsx';
 import SkillsContent from '@sections/skillsContent/skillsContent.jsx';
 import AboutMe from '@sections/aboutMe/aboutMe.jsx';
 import ProjectsSection from '@sections/projectSection/projectsSection.jsx';
-
+import ContactLink from './sections/contactLink/contactLink';
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
       <SkillsContent />
       <AboutMe />
       <ProjectsSection />
+      <ContactLink />
 
 
     </>
