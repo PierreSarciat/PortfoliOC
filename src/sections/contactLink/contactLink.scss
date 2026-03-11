@@ -1,0 +1,49 @@
+@use "@styles/variable.scss" as *;
+
+.ContactLink__background {
+  background-color: white;
+  padding: 30px;
+  width: 100%;
+
+
+  .ContactLink__content {
+    background-color: $background-color1;
+    margin: 0 auto;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 30px;
+    border-bottom-left-radius: 60px;
+   box-shadow:
+  0 10px 30px rgba(0, 0, 0, 0.08),
+  0 4px 10px rgba(0, 0, 0, 0.04);
+
+
+
+
+    h1,
+    p,
+    a {
+      opacity: 0;
+    }
+
+    &.is-visible {
+      h1 {
+        animation: fadeSlideUp 1.5s ease-out forwards;
+        animation-delay: 0.5s;
+      }
+
+      p {
+        margin-bottom: 40px;
+        animation: fadeSlideUp 1.5s ease-out forwards;
+        animation-delay: 2s;
+      }
+
+      a {
+        animation: fadeSlideUp 1.5s ease-out forwards;
+        animation-delay: 3s;
+      }
+    }
+  }
+}
