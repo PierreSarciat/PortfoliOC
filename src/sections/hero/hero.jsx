@@ -21,11 +21,11 @@ const Hero = () => {
                 <div className='heroContent'>
                     <h1 className="title">Pierre-Henri Sarciat</h1>
                     <h2><span className='highlight'>{"<"}</span> Développeur web <span className='highlight'>{"/>"}</span> </h2>
-                    <section className='about'>
+                    <div className='about'>
                         <p></p>
                         <p>Développeur web junior orienté front-end, spécialisé en React et JavaScript, avec une approche agile du développement (Scrum, Trello) et une attention particulière à l’expérience utilisateur.</p>
                         <p></p>
-                    </section>
+                    </div>
                     <div className='buttonHome'>
                         <ButtonP text="Me contacter" href="#contact" />
                         <ButtonS id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.pdf`} target="_blank" rel="noopener noreferrer" />
