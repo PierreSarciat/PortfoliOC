@@ -7,6 +7,7 @@ import Contact from '@pages/contact/contact.jsx';
 
 const router = createBrowserRouter([
   {
+
     path: '/',
     element: <Layout />,
     children: [
