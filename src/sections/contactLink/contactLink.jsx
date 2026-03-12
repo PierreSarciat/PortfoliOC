@@ -13,9 +13,8 @@ const ContactLink = () => {
                 ref={ref}
                 className={`ContactLink__content ${isVisible ? 'is-visible' : ''}`}
             >
-                <h1>Vous préparer seul est possible.
-                    Être accompagné change tout.</h1>
-                <p>Discutons ensemble de votre projet et de vos objectifs lors d'un premier entretien gratuit.</p>
+                <h1>Votre projet mérite plus qu’un site: une solution pensée pour vous.</h1>
+                <p>Discutons ensemble de votre projet et de vos objectifs lors d'un premier entretien.</p>
                 <Link to="/contact">
                     <Button text="Contactez-moi" />
                 </Link>
