@@ -44,12 +44,12 @@
     }
 
     .about{
-      animation-delay: 1s;
+      animation-delay: 1.5s;
     }
 
     .buttonHome,
     .logo{
-      animation-delay: 2s;
+      animation-delay: 3s;
     }
   }
 }
@@ -162,7 +162,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   text-align: center;
-  margin-top: 50px;
+  margin-top:40px;
   padding-left: 20px;
   padding-right: 20px;
 }
