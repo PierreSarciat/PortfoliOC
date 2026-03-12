@@ -3,9 +3,7 @@ import ContactForm from '@components/contact/contactForm.jsx';
 import { useInView } from '@hooks/useInView';
 import './contact.scss';
 
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL;
-const contactPhone = import.meta.env.VITE_CONTACT_PHONE;
-const contactLocalisation = import.meta.env.VITE_CONTACT_LOCALISATION;
+
 
 const Contact = ({ contactEmail, contactPhone, contactLocalisation }) => {
 
@@ -15,51 +13,47 @@ const Contact = ({ contactEmail, contactPhone, contactLocalisation }) => {
 
     return (
         <div className='contact__background'>
+            <section className='section'>
+                <div className='contact__container'>
 
-            <div className='contact__container'>
 
-
-                <div
-                    ref={contentRef}
-                    className={`contact__content ${isVisible ? 'is-visible' : ''}`}
-                >
-                    <div className="information">
-                        <h3>Informations de contact</h3>
-                        <div className='info'>
-                            <i className="fa-solid fa-envelope"></i>
-                            <p><span className='item'>E-mail</span><br />{contactEmail}</p>
+                    <div
+                        ref={contentRef}
+                        className={`contact__content ${isVisible ? 'is-visible' : ''}`}
+                    >
+                        <div className="information">
+                            <h2>Informations de contact</h2>
+                            <div className='info'>
+                                <i className="fa-solid fa-envelope"></i>
+                                <p><span className='item'>E-mail</span><br />{contactEmail}</p>
+                            </div>
+                            <div className='info'>
+                                <i className="fa-solid fa-phone"></i>
+                                <p><span className='item'>Téléphone</span><br />{contactPhone}</p>
+                            </div>
+                            <div className='info'>
+                                <i className="fa-solid fa-location-dot"></i>
+                                <p><span className='item'>Localisation</span><br />{contactLocalisation}</p>
+                            </div>
                         </div>
-                        <div className='info'>
-                            <i className="fa-solid fa-phone"></i>
-                            <p><span className='item'>Téléphone</span><br />{contactPhone}</p>
-                        </div>
-                        <div className='info'>
-                            <i className="fa-solid fa-location-dot"></i>
-                            <p><span className='item'>Localisation</span><br />{contactLocalisation}</p>
+
+                        <div className="contact__form">
+                            <ContactForm />
                         </div>
                     </div>
-
-                    <div className="contact__form">
-                        <ContactForm />
+                    <div
+                        ref={contactRef}
+                        className={`contact ${isVisible ? 'is-visible' : ''}`}
+                    >
+                        <h2>Contactez-moi</h2>
+                        <p>
+                            Vous avez une question ou souhaitez en savoir plus sur mes programmes ?
+                            N'hésitez pas à me contacter.
+                        </p>
                     </div>
+
                 </div>
-
-
-
-
-                <div
-                    ref={contactRef}
-                    className={`contact ${isVisible ? 'is-visible' : ''}`}
-                >
-                    <h2>Contactez-moi</h2>
-                    <p>
-                        Vous avez une question ou souhaitez en savoir plus sur mes programmes ?
-                        N'hésitez pas à me contacter.
-                    </p>
-                </div>
-
-            </div>
-
+            </section>
         </div>
     );
 };
