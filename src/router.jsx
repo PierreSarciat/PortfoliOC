@@ -12,7 +12,13 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <App /> },
-      { path: 'contact', element: <Contact /> }
+      {
+        path: 'contact', element: <Contact
+          contactEmail={import.meta.env.VITE_CONTACT_EMAIL}
+          contactPhone={import.meta.env.VITE_CONTACT_PHONE}
+          contactLocalisation={import.meta.env.VITE_CONTACT_LOCALISATION}
+        />
+      }
     ]
   },
 ], {
