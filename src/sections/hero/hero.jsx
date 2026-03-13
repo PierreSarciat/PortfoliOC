@@ -1,8 +1,6 @@
 import React from 'react';
 import "./hero.scss";
-import Card from '@components/card/card.jsx';
-import { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 import ButtonP from "@components/button/button-primary.jsx";
 import ButtonS from "@components/button/button-secondary.jsx";
 import logoGit from "@logo/logoGitHub.png"
@@ -27,7 +25,11 @@ const Hero = () => {
                         <p></p>
                     </div>
                     <div className='buttonHome'>
-                        <ButtonP text="Me contacter" href="#contact" />
+                        <Link to="/contact">
+                            <ButtonP text="Me contacter">
+                            </ButtonP>
+                        </Link>
+
                         <ButtonS id="CV" text="Mon CV" href={`${import.meta.env.BASE_URL}cv-pierre.pdf`} target="_blank" rel="noopener noreferrer" />
                     </div>
                     <div className='logo'>
