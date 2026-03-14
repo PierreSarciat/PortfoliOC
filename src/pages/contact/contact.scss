@@ -66,12 +66,22 @@
 .section {
   justify-content: center;
   display: flex;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   padding-top: 30px;
-  width: 100vw; 
+  width: 100vw;
 
-  h2{
-        color: #e3e3fa;;
+  h2 {
+    color: #e3e3fa;
+    ;
 
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .contact__container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 20px;
   }
 }
