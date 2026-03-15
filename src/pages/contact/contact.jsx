@@ -47,7 +47,7 @@ const Contact = ({ contactEmail, contactPhone, contactLocalisation }) => {
                     >
                         <h2>Contactez-moi</h2>
                         <p>
-                            Vous avez une question ou souhaitez en savoir plus sur mes programmes ?
+                            Vous avez une question ou souhaitez en savoir plus sur mon travail ?
                             N'hésitez pas à me contacter.
                         </p>
                     </div>
