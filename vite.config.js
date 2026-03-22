@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-
+import Pages from 'vite-plugin-pages';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,6 +18,7 @@ export default defineConfig({
       webp: { quality: 80 },
       avif: { quality: 50 },
     }),
+    Pages(),
   ],
   base: '/PortfoliOC/',
   resolve: {
