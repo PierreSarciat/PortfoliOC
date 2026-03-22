@@ -1,5 +1,6 @@
 {
-  "name": "PortfoliOC",
+  "name": "portfolio",
+  "description": "Portfolio React avec Vite",
   "private": true,
   "version": "0.0.0",
   "type": "module",
